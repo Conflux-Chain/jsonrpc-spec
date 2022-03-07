@@ -1,0 +1,25 @@
+{
+  "name": "@conflux-dev/jsonrpc-spec",
+  "version": "1.0.0",
+  "description": "The Conflux JSON-RPC is a collection of methods that conflux-rust client implement.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node scripts/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Conflux-Chain/jsonrpc-spec.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Conflux-Chain/jsonrpc-spec/issues"
+  },
+  "homepage": "https://github.com/Conflux-Chain/jsonrpc-spec#readme",
+  "dependencies": {
+    "@open-rpc/schema-utils-js": "^1.15.0",
+    "json-schema-merge-allof": "^0.8.1"
+  }
+}
