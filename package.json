@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node scripts/build.js",
-    "mock-server": "open-rpc-mock-server"
+    "mock-server": "open-rpc-mock-server -d service-descriptions/cfx.json"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Conflux-Chain/jsonrpc-spec#readme",
   "dependencies": {
-    "@open-rpc/schema-utils-js": "^1.15.0",
+    "@open-rpc/schema-utils-js": "^1.16.1",
     "json-schema-merge-allof": "^0.8.1"
   },
   "devDependencies": {
