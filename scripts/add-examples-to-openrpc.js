@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const examples = JSON.parse(fs.readFileSync(process.argv[2]));
+const { examples } = JSON.parse(fs.readFileSync(process.argv[2]));
 const openrpc = JSON.parse(fs.readFileSync(process.argv[3]));
 
 // let newRPC = Object.assign({}, openrpc);
