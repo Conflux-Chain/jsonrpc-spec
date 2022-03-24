@@ -16,7 +16,7 @@ if (error != true) {
 }
 
 try {
-  await Promise.resolve(parseOpenRPCDocument(openrpc));
+  await parseOpenRPCDocument(openrpc);
 } catch(e) {
   console.log(e.name);
   let end = e.message.indexOf("schema in question");
