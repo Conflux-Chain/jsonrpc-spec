@@ -1,0 +1,78 @@
+{
+  "CfxRpcLogFilter": {
+    "type": "object",
+    "required": [
+    ],
+    "properties": {
+      "address": {
+        "nullable": true,
+        "title": "address",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/RpcAddress"
+        }
+      },
+      "blockHashes": {
+        "nullable": true,
+        "title": "blockHashes",
+        "type": "array",
+        "items": {
+          "title": "H256",
+          "$ref": "#/components/schemas/H256"
+        }
+      },
+      "fromBlock": {
+        "nullable": true,
+        "title": "fromBlock",
+        "$ref": "#/components/schemas/U64"
+      },
+      "fromEpoch": {
+        "nullable": true,
+        "title": "fromEpoch",
+        "$ref": "#/components/schemas/EpochNumber"
+      },
+      "limit": {
+        "nullable": true,
+        "title": "limit",
+        "$ref": "#/components/schemas/U64"
+      },
+      "offset": {
+        "nullable": true,
+        "title": "offset",
+        "$ref": "#/components/schemas/U64"
+      },
+      "toBlock": {
+        "nullable": true,
+        "title": "toBlock",
+        "$ref": "#/components/schemas/U64"
+      },
+      "toEpoch": {
+        "nullable": true,
+        "title": "toEpoch",
+        "$ref": "#/components/schemas/EpochNumber"
+      },
+      "topics": {
+        "nullable": true,
+        "title": "topics",
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {
+              "title": "Multiple Topics",
+              "type": "array",
+              "maxItems": 4,
+              "items": {
+                "$ref": "#/components/schemas/H256"
+              }
+            },
+            {
+              "title": "Topic",
+              "nullable": true,
+              "$ref": "#/components/schemas/H256"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

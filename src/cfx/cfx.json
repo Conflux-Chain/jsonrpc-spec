@@ -4549,8 +4549,41 @@
   "components": {
     "schemas": {
       "Account": {
-        "title": "Account",
-        "type": "string"
+        "type": "object",
+        "properties": {
+          "address": {
+            "title": "address",
+            "$ref": "#/components/schemas/RpcAddress"
+          },
+          "balance": {
+            "title": "balance",
+            "$ref": "#/components/schemas/U256"
+          },
+          "nonce": {
+            "title": "nonce",
+            "$ref": "#/components/schemas/U256"
+          },
+          "codeHash": {
+            "title": "codeHash",
+            "$ref": "#/components/schemas/H256"
+          },
+          "stakingBalance": {
+            "title": "stakingBalance",
+            "$ref": "#/components/schemas/U256"
+          },
+          "collateralForStorage": {
+            "title": "collateralForStorage",
+            "$ref": "#/components/schemas/U256"
+          },
+          "accumulatedInterestReturn": {
+            "title": "accumulatedInterestReturn",
+            "$ref": "#/components/schemas/U256"
+          },
+          "admin": {
+            "title": "admin",
+            "$ref": "#/components/schemas/RpcAddress"
+          }
+        }
       },
       "AccountPendingInfo": {
         "type": "object",
@@ -4795,14 +4828,21 @@
       },
       "CfxRpcLogFilter": {
         "type": "object",
+        "required": [
+        ],
         "properties": {
           "address": {
             "nullable": true,
-            "title": "address"
+            "title": "address",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RpcAddress"
+            }
           },
           "blockHashes": {
             "nullable": true,
             "title": "blockHashes",
+            "type": "array",
             "items": {
               "title": "H256",
               "$ref": "#/components/schemas/H256"
@@ -4841,7 +4881,24 @@
           "topics": {
             "nullable": true,
             "title": "topics",
-            "items": {}
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "title": "Multiple Topics",
+                  "type": "array",
+                  "maxItems": 4,
+                  "items": {
+                    "$ref": "#/components/schemas/H256"
+                  }
+                },
+                {
+                  "title": "Topic",
+                  "nullable": true,
+                  "$ref": "#/components/schemas/H256"
+                }
+              ]
+            }
           }
         }
       },

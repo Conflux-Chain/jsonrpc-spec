@@ -1,0 +1,39 @@
+{
+  "Account": {
+    "type": "object",
+    "properties": {
+      "address": {
+        "title": "address",
+        "$ref": "#/components/schemas/RpcAddress"
+      },
+      "balance": {
+        "title": "balance",
+        "$ref": "#/components/schemas/U256"
+      },
+      "nonce": {
+        "title": "nonce",
+        "$ref": "#/components/schemas/U256"
+      },
+      "codeHash": {
+        "title": "codeHash",
+        "$ref": "#/components/schemas/H256"
+      },
+      "stakingBalance": {
+        "title": "stakingBalance",
+        "$ref": "#/components/schemas/U256"
+      },
+      "collateralForStorage": {
+        "title": "collateralForStorage",
+        "$ref": "#/components/schemas/U256"
+      },
+      "accumulatedInterestReturn": {
+        "title": "accumulatedInterestReturn",
+        "$ref": "#/components/schemas/U256"
+      },
+      "admin": {
+        "title": "admin",
+        "$ref": "#/components/schemas/RpcAddress"
+      }
+    }
+  }
+}
