@@ -1,6 +1,6 @@
 {
   "name": "@conflux-dev/jsonrpc-spec",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The Conflux JSON-RPC is a collection of methods that conflux-rust client implement.",
   "main": "src/index.js",
   "scripts": {
