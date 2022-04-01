@@ -721,7 +721,7 @@
   "schemas": {
    "Block": {
     "type": "object",
-    "title": "/// Block representation\n#[derive(Debug, Serialize)]\n#[serde(rename_all = \"camelCase\")]",
+    "title": "Block representation\n#[derive(Debug, Serialize)]\n#[serde(rename_all = \"camelCase\")]",
     "properties": {
      "author": {
       "title": "author",
@@ -863,7 +863,7 @@
     ]
    },
    "BlockTransactions": {
-    "title": "/// Block Transactions\n#[derive(Debug)]",
+    "title": "Block Transactions\n#[derive(Debug)]",
     "oneOf": [
      {
       "type": "array",
@@ -887,7 +887,7 @@
    },
    "CallRequest": {
     "type": "object",
-    "title": "/// Call request\n#[derive(Debug, Default, PartialEq, Deserialize)]\n#[serde(deny_unknown_fields)]\n#[serde(rename_all = \"camelCase\")]",
+    "title": "Call request\n#[derive(Debug, Default, PartialEq, Deserialize)]\n#[serde(deny_unknown_fields)]\n#[serde(rename_all = \"camelCase\")]",
     "properties": {
      "data": {
       "nullable": true,
@@ -938,7 +938,7 @@
    },
    "EthRpcLogFilter": {
     "type": "object",
-    "title": "/// Filter Address\npub type FilterAddress = VariadicValue\u003cH160\u003e;\n/// Topic\npub type Topic = VariadicValue\u003cH256\u003e;\n\n/// Filter\n#[derive(Debug, PartialEq, Clone, Deserialize, Eq, Hash)]\n#[serde(deny_unknown_fields)]\n#[serde(rename_all = \"camelCase\")]",
+    "title": "Filter Address\npub type FilterAddress = VariadicValue\u003cH160\u003e;\n/// Topic\npub type Topic = VariadicValue\u003cH256\u003e;\n\n/// Filter\n#[derive(Debug, PartialEq, Clone, Deserialize, Eq, Hash)]\n#[serde(deny_unknown_fields)]\n#[serde(rename_all = \"camelCase\")]",
     "properties": {
      "address": {
       "nullable": true,
@@ -1017,7 +1017,7 @@
    },
    "Log": {
     "type": "object",
-    "title": "/// Log\n#[derive(Debug, Serialize, PartialEq, Eq, Hash, Clone)]\n#[serde(rename_all = \"camelCase\")]",
+    "title": "Log\n#[derive(Debug, Serialize, PartialEq, Eq, Hash, Clone)]\n#[serde(rename_all = \"camelCase\")]",
     "properties": {
      "address": {
       "title": "address",
@@ -1069,7 +1069,7 @@
    },
    "Receipt": {
     "type": "object",
-    "title": "/// Receipt\n#[derive(Debug, Serialize)]\n#[serde(rename_all = \"camelCase\")]",
+    "title": "Receipt\n#[derive(Debug, Serialize)]\n#[serde(rename_all = \"camelCase\")]",
     "properties": {
      "blockHash": {
       "title": "blockHash",
@@ -1142,7 +1142,7 @@
    },
    "SyncInfo": {
     "type": "object",
-    "title": "/// Sync info\n#[derive(Default, Debug, Serialize, PartialEq)]\n#[serde(rename_all = \"camelCase\")]",
+    "title": "Sync info\n#[derive(Default, Debug, Serialize, PartialEq)]\n#[serde(rename_all = \"camelCase\")]",
     "properties": {
      "currentBlock": {
       "title": "currentBlock",
@@ -1169,7 +1169,7 @@
     }
    },
    "SyncStatus": {
-    "title": "/// Sync status\n#[derive(Debug, PartialEq)]",
+    "title": "Sync status\n#[derive(Debug, PartialEq)]",
     "oneOf": [
      {
       "title": "SyncInfo",
@@ -1200,7 +1200,7 @@
    },
    "Transaction": {
     "type": "object",
-    "title": "/// Transaction\n#[derive(Debug, Default, Clone, PartialEq, Serialize)]\n#[serde(rename_all = \"camelCase\")]",
+    "title": "Transaction\n#[derive(Debug, Default, Clone, PartialEq, Serialize)]\n#[serde(rename_all = \"camelCase\")]",
     "properties": {
      "blockHash": {
       "nullable": true,
