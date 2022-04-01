@@ -1,6 +1,11 @@
 # Conflux JSON-RPC Specification
 
-The Conflux JSON-RPC is a collection of methods that conflux-rust client implement.
+The Conflux JSON-RPC is a collection of methods. This interface allows downstream tooling and infrastructure to generate code or build mock server.
+
+## Online Viewer
+
+* [cfx namespace methods](https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/conflux-chain/jsonrpc-spec/main/src/cfx/cfx.json&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar])
+* [eth namespace methods](https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/conflux-chain/jsonrpc-spec/main/src/eth/eth.json&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar])
 
 ## How to run MockServer
 

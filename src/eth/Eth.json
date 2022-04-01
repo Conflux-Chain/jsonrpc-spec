@@ -1,10 +1,26 @@
 {
   "openrpc": "1.2.6",
   "info": {
-    "title": "Eth",
+    "title": "Ethereum JSON-RPC Specification",
     "version": "0.1.0",
-    "description": " Eth rpc interface.\n"
+    "license": {
+			"name": "CC0-1.0",
+			"url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+		},
+    "description": "A specification of the standard interface for Ethereum clients."
   },
+  "servers": [
+    {
+      "name": "eSpace mainnet RPC",
+      "url": "https://evm.confluxrpc.com",
+      "summary": "The mainnet RPC server for Conflux eSpace. chainId: 1030"
+    },
+    {
+      "name": "eSpace testnet RPC",
+      "url": "https://evmtestnet.confluxrpc.com",
+      "summary": "The testnet RPC server for Conflux eSpace. chainId: 71"
+    }
+  ],
   "methods": [
     {
       "name": "web3_clientVersion",
