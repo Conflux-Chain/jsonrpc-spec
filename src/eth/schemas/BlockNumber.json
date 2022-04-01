@@ -7,6 +7,33 @@
         "$ref": "#/components/schemas/U64"
       },
       {
+        "title": "BlockHash",
+        "type": "object",
+        "required": [
+          "blockHash"
+        ],
+        "properties": {
+          "blockHash": {
+            "$ref": "#/components/schemas/H256"
+          },
+          "requireCanonical": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "title": "BlockNumber",
+        "type": "object",
+        "required": [
+          "blockNumber"
+        ],
+        "properties": {
+          "blockNumber": {
+            "$ref": "#/components/schemas/U64"
+          }
+        }
+      },
+      {
         "enum": [
           "earliest",
           "latest",
