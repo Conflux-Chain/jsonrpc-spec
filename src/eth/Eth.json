@@ -1,0 +1,1233 @@
+{
+  "openrpc": "1.2.6",
+  "info": {
+    "title": "Eth",
+    "version": "0.1.0",
+    "description": " Eth rpc interface.\n"
+  },
+  "methods": [
+    {
+      "name": "web3_clientVersion",
+      "summary": "\n    ",
+      "params": [],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/String"
+        }
+      }
+    },
+    {
+      "name": "net_version",
+      "summary": "\n\n    ",
+      "params": [],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/String"
+        }
+      }
+    },
+    {
+      "name": "eth_protocolVersion",
+      "summary": "/// Returns protocol version encoded as a string (quotes are necessary).\n    ",
+      "params": [],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/String"
+        }
+      }
+    },
+    {
+      "name": "eth_syncing",
+      "summary": "/// Returns an object with data about the sync status or false. (wtf?)\n    ",
+      "params": [],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/SyncStatus"
+        }
+      }
+    },
+    {
+      "name": "eth_hashrate",
+      "summary": "/// Returns the number of hashes per second that the node is mining with.\n    ",
+      "params": [],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/U256"
+        }
+      }
+    },
+    {
+      "name": "eth_coinbase",
+      "summary": "/// Returns block author.\n    ",
+      "params": [],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/H160"
+        }
+      }
+    },
+    {
+      "name": "eth_mining",
+      "summary": "/// Returns true if client is actively mining new blocks.\n    ",
+      "params": [],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/bool"
+        }
+      }
+    },
+    {
+      "name": "eth_chainId",
+      "summary": "/// Returns the chain ID used for transaction signing at the\n    /// current best block. None is returned if not\n    /// available.\n    ",
+      "params": [],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/U64"
+        }
+      }
+    },
+    {
+      "name": "eth_gasPrice",
+      "summary": "/// Returns current gas_price.\n    ",
+      "params": [],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/U256"
+        }
+      }
+    },
+    {
+      "name": "eth_maxPriorityFeePerGas",
+      "summary": "/// Returns current max_priority_fee\n    ",
+      "params": [],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/U256"
+        }
+      }
+    },
+    {
+      "name": "eth_accounts",
+      "summary": "/// Returns accounts list.\n    ",
+      "params": [],
+      "result": {
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/H160"
+          }
+        }
+      }
+    },
+    {
+      "name": "eth_blockNumber",
+      "summary": "/// Returns highest block number.\n    ",
+      "params": [],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/U256"
+        }
+      }
+    },
+    {
+      "name": "eth_getBalance",
+      "summary": "/// Returns balance of the given account.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H160"
+          }
+        },
+        {
+          "name": "_",
+          "schema": {
+            "nullable": true,
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/U256"
+        }
+      }
+    },
+    {
+      "name": "eth_getStorageAt",
+      "summary": "/// Returns content of the storage at given address.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H160"
+          }
+        },
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/U256"
+          }
+        },
+        {
+          "name": "_",
+          "schema": {
+            "nullable": true,
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/H256"
+        }
+      }
+    },
+    {
+      "name": "eth_getBlockByHash",
+      "summary": "/// Returns block with given hash.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H256"
+          }
+        },
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/bool"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/Block"
+        }
+      }
+    },
+    {
+      "name": "eth_getBlockByNumber",
+      "summary": "/// Returns block with given number.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        },
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/bool"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/Block"
+        }
+      }
+    },
+    {
+      "name": "eth_getTransactionCount",
+      "summary": "/// Returns the number of transactions sent from given address at given time\n    /// (block number).\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H160"
+          }
+        },
+        {
+          "name": "_",
+          "schema": {
+            "nullable": true,
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/U256"
+        }
+      }
+    },
+    {
+      "name": "eth_getBlockTransactionCountByHash",
+      "summary": "/// Returns the number of transactions in a block with given hash.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H256"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/U256"
+        }
+      }
+    },
+    {
+      "name": "eth_getBlockTransactionCountByNumber",
+      "summary": "/// Returns the number of transactions in a block with given block number.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/U256"
+        }
+      }
+    },
+    {
+      "name": "eth_getUncleCountByBlockHash",
+      "summary": "/// Returns the number of uncles in a block with given hash.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H256"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/U256"
+        }
+      }
+    },
+    {
+      "name": "eth_getUncleCountByBlockNumber",
+      "summary": "/// Returns the number of uncles in a block with given block number.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/U256"
+        }
+      }
+    },
+    {
+      "name": "eth_getCode",
+      "summary": "/// Returns the code at given address at given time (block number).\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H160"
+          }
+        },
+        {
+          "name": "_",
+          "schema": {
+            "nullable": true,
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/Bytes"
+        }
+      }
+    },
+    {
+      "name": "eth_sendRawTransaction",
+      "summary": "/// Sends signed transaction, returning its hash.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/Bytes"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/H256"
+        }
+      }
+    },
+    {
+      "name": "eth_submitTransaction",
+      "summary": "/// @alias of `eth_sendRawTransaction`.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/Bytes"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/H256"
+        }
+      }
+    },
+    {
+      "name": "eth_call",
+      "summary": "/// Call contract, returning the output data.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CallRequest"
+          }
+        },
+        {
+          "name": "_",
+          "schema": {
+            "nullable": true,
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/Bytes"
+        }
+      }
+    },
+    {
+      "name": "eth_estimateGas",
+      "summary": "/// Estimate gas needed for execution of given contract.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CallRequest"
+          }
+        },
+        {
+          "name": "_",
+          "schema": {
+            "nullable": true,
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/U256"
+        }
+      }
+    },
+    {
+      "name": "eth_getTransactionByHash",
+      "summary": "/// Get transaction by its hash.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H256"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/Transaction"
+        }
+      }
+    },
+    {
+      "name": "eth_getTransactionByBlockHashAndIndex",
+      "summary": "/// Returns transaction at given block hash and index.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H256"
+          }
+        },
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/Index"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/Transaction"
+        }
+      }
+    },
+    {
+      "name": "eth_getTransactionByBlockNumberAndIndex",
+      "summary": "/// Returns transaction by given block number and index.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        },
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/Index"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/Transaction"
+        }
+      }
+    },
+    {
+      "name": "eth_getTransactionReceipt",
+      "summary": "/// Returns transaction receipt by transaction hash.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H256"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/Receipt"
+        }
+      }
+    },
+    {
+      "name": "eth_getUncleByBlockHashAndIndex",
+      "summary": "/// Returns an uncles at given block and index.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H256"
+          }
+        },
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/Index"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/Block"
+        }
+      }
+    },
+    {
+      "name": "eth_getUncleByBlockNumberAndIndex",
+      "summary": "/// Returns an uncles at given block and index.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        },
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/Index"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "nullable": true,
+          "$ref": "#/components/schemas/Block"
+        }
+      }
+    },
+    {
+      "name": "eth_getLogs",
+      "summary": "/// Returns logs matching given filter object.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/EthRpcLogFilter"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/Log"
+          }
+        }
+      }
+    },
+    {
+      "name": "eth_submitHashrate",
+      "summary": "/// Used for submitting mining hashrate.\n    ",
+      "params": [
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/U256"
+          }
+        },
+        {
+          "name": "_",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H256"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "$ref": "#/components/schemas/bool"
+        }
+      }
+    },
+    {
+      "name": "parity_getBlockReceipts",
+      "summary": "\n\n    ",
+      "params": [
+        {
+          "name": "_",
+          "schema": {
+            "nullable": true,
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        }
+      ],
+      "result": {
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/Receipt"
+          }
+        }
+      }
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Block": {
+        "type": "object",
+        "title": "/// Block representation\n#[derive(Debug, Serialize)]\n#[serde(rename_all = \"camelCase\")]",
+        "properties": {
+          "author": {
+            "title": "author",
+            "$ref": "#/components/schemas/H160"
+          },
+          "baseFeePerGas": {
+            "nullable": true,
+            "title": "baseFeePerGas",
+            "$ref": "#/components/schemas/U256"
+          },
+          "difficulty": {
+            "title": "difficulty",
+            "$ref": "#/components/schemas/U256"
+          },
+          "extraData": {
+            "title": "extraData",
+            "$ref": "#/components/schemas/Bytes"
+          },
+          "gasLimit": {
+            "title": "gasLimit",
+            "$ref": "#/components/schemas/U256"
+          },
+          "gasUsed": {
+            "title": "gasUsed",
+            "$ref": "#/components/schemas/U256"
+          },
+          "hash": {
+            "title": "hash",
+            "$ref": "#/components/schemas/H256"
+          },
+          "logsBloom": {
+            "title": "logsBloom",
+            "$ref": "#/components/schemas/H2048"
+          },
+          "miner": {
+            "title": "miner",
+            "$ref": "#/components/schemas/H160"
+          },
+          "mixHash": {
+            "title": "mixHash",
+            "$ref": "#/components/schemas/H256"
+          },
+          "nonce": {
+            "title": "nonce",
+            "$ref": "#/components/schemas/H64"
+          },
+          "number": {
+            "title": "number",
+            "$ref": "#/components/schemas/U256"
+          },
+          "parentHash": {
+            "title": "parentHash",
+            "$ref": "#/components/schemas/H256"
+          },
+          "receiptsRoot": {
+            "title": "receiptsRoot",
+            "$ref": "#/components/schemas/H256"
+          },
+          "size": {
+            "title": "size",
+            "$ref": "#/components/schemas/U256"
+          },
+          "stateRoot": {
+            "title": "stateRoot",
+            "$ref": "#/components/schemas/H256"
+          },
+          "timestamp": {
+            "title": "timestamp",
+            "$ref": "#/components/schemas/U256"
+          },
+          "totalDifficulty": {
+            "title": "totalDifficulty",
+            "$ref": "#/components/schemas/U256"
+          },
+          "transactions": {
+            "title": "transactions",
+            "$ref": "#/components/schemas/BlockTransactions"
+          },
+          "transactionsRoot": {
+            "title": "transactionsRoot",
+            "$ref": "#/components/schemas/H256"
+          },
+          "uncles": {
+            "type": "array",
+            "title": "uncles",
+            "items": {
+              "title": "H256",
+              "$ref": "#/components/schemas/H256"
+            }
+          },
+          "sha3Uncles": {
+            "title": "sha3Uncles",
+            "$ref": "#/components/schemas/H256"
+          }
+        }
+      },
+      "BlockNumber": {
+        "title": "Block Number or Tags",
+        "oneOf": [
+          {
+            "title": "U64",
+            "$ref": "#/components/schemas/U64"
+          },
+          {
+            "enum": [
+              "earliest",
+              "latest",
+              "pending"
+            ]
+          }
+        ]
+      },
+      "BlockTransactions": {
+        "title": "/// Block Transactions\n#[derive(Debug)]",
+        "oneOf": [
+          {
+            "type": "array",
+            "items": {
+              "title": "H256",
+              "$ref": "#/components/schemas/H256"
+            }
+          },
+          {
+            "type": "array",
+            "items": {
+              "title": "Transaction",
+              "$ref": "#/components/schemas/Transaction"
+            }
+          }
+        ]
+      },
+      "Bytes": {
+        "type": "string",
+        "pattern": "^0x[0-9a-f]*$"
+      },
+      "CallRequest": {
+        "type": "object",
+        "title": "/// Call request\n#[derive(Debug, Default, PartialEq, Deserialize)]\n#[serde(deny_unknown_fields)]\n#[serde(rename_all = \"camelCase\")]",
+        "properties": {
+          "data": {
+            "nullable": true,
+            "title": "data",
+            "$ref": "#/components/schemas/Bytes"
+          },
+          "from": {
+            "nullable": true,
+            "title": "from",
+            "$ref": "#/components/schemas/H160"
+          },
+          "gas": {
+            "nullable": true,
+            "title": "gas",
+            "$ref": "#/components/schemas/U256"
+          },
+          "gasPrice": {
+            "nullable": true,
+            "title": "gasPrice",
+            "$ref": "#/components/schemas/U256"
+          },
+          "maxFeePerGas": {
+            "nullable": true,
+            "title": "maxFeePerGas",
+            "$ref": "#/components/schemas/U256"
+          },
+          "maxPriorityFeePerGas": {
+            "nullable": true,
+            "title": "maxPriorityFeePerGas",
+            "$ref": "#/components/schemas/U256"
+          },
+          "nonce": {
+            "nullable": true,
+            "title": "nonce",
+            "$ref": "#/components/schemas/U256"
+          },
+          "to": {
+            "nullable": true,
+            "title": "to",
+            "$ref": "#/components/schemas/H160"
+          },
+          "value": {
+            "nullable": true,
+            "title": "value",
+            "$ref": "#/components/schemas/U256"
+          }
+        }
+      },
+      "EthRpcLogFilter": {
+        "type": "object",
+        "title": "/// Filter Address\npub type FilterAddress = VariadicValue\u003cH160\u003e;\n/// Topic\npub type Topic = VariadicValue\u003cH256\u003e;\n\n/// Filter\n#[derive(Debug, PartialEq, Clone, Deserialize, Eq, Hash)]\n#[serde(deny_unknown_fields)]\n#[serde(rename_all = \"camelCase\")]",
+        "properties": {
+          "address": {
+            "nullable": true,
+            "title": "address",
+            "$ref": "#/components/schemas/FilterAddress"
+          },
+          "blockHash": {
+            "nullable": true,
+            "title": "blockHash",
+            "$ref": "#/components/schemas/H256"
+          },
+          "fromBlock": {
+            "nullable": true,
+            "title": "fromBlock",
+            "$ref": "#/components/schemas/BlockNumber"
+          },
+          "limit": {
+            "nullable": true,
+            "title": "limit",
+            "$ref": "#/components/schemas/usize"
+          },
+          "toBlock": {
+            "nullable": true,
+            "title": "toBlock",
+            "$ref": "#/components/schemas/BlockNumber"
+          },
+          "topics": {
+            "type": "array",
+            "nullable": true,
+            "title": "topics",
+            "items": {
+              "title": "Topic",
+              "$ref": "#/components/schemas/Topic"
+            }
+          }
+        }
+      },
+      "FilterAddress": {
+        "nullable": true,
+        "oneOf": [
+          {
+            "title": "H160",
+            "$ref": "#/components/schemas/H160"
+          },
+          {
+            "type": "array",
+            "items": {
+              "title": "H160",
+              "$ref": "#/components/schemas/H160"
+            }
+          }
+        ]
+      },
+      "H160": {
+        "type": "string",
+        "pattern": "^0x[0-9,a-f,A-F]{40}$"
+      },
+      "H2048": {
+        "type": "string",
+        "pattern": "^0x[0-9,a-f,A-F]{512}$"
+      },
+      "H256": {
+        "type": "string",
+        "pattern": "^0x[0-9,a-f,A-F]{64}$"
+      },
+      "H512": {
+        "type": "string",
+        "pattern": "^0x[0-9,a-f,A-F]{128}$"
+      },
+      "H64": {
+        "type": "string",
+        "pattern": "^0x[0-9,a-f,A-F]{16}$"
+      },
+      "Index": {
+        "type": "number"
+      },
+      "Log": {
+        "type": "object",
+        "title": "/// Log\n#[derive(Debug, Serialize, PartialEq, Eq, Hash, Clone)]\n#[serde(rename_all = \"camelCase\")]",
+        "properties": {
+          "address": {
+            "title": "address",
+            "$ref": "#/components/schemas/H160"
+          },
+          "blockHash": {
+            "title": "blockHash",
+            "$ref": "#/components/schemas/H256"
+          },
+          "blockNumber": {
+            "title": "blockNumber",
+            "$ref": "#/components/schemas/U256"
+          },
+          "data": {
+            "title": "data",
+            "$ref": "#/components/schemas/Bytes"
+          },
+          "logIndex": {
+            "nullable": true,
+            "title": "logIndex",
+            "$ref": "#/components/schemas/U256"
+          },
+          "removed": {
+            "title": "removed",
+            "$ref": "#/components/schemas/bool"
+          },
+          "topics": {
+            "type": "array",
+            "title": "topics",
+            "items": {
+              "title": "H256",
+              "$ref": "#/components/schemas/H256"
+            }
+          },
+          "transactionHash": {
+            "title": "transactionHash",
+            "$ref": "#/components/schemas/H256"
+          },
+          "transactionIndex": {
+            "title": "transactionIndex",
+            "$ref": "#/components/schemas/U256"
+          },
+          "transactionLogIndex": {
+            "nullable": true,
+            "title": "transactionLogIndex",
+            "$ref": "#/components/schemas/U256"
+          }
+        }
+      },
+      "Receipt": {
+        "type": "object",
+        "title": "/// Receipt\n#[derive(Debug, Serialize)]\n#[serde(rename_all = \"camelCase\")]",
+        "properties": {
+          "blockHash": {
+            "title": "blockHash",
+            "$ref": "#/components/schemas/H256"
+          },
+          "blockNumber": {
+            "title": "blockNumber",
+            "$ref": "#/components/schemas/U256"
+          },
+          "contractAddress": {
+            "nullable": true,
+            "title": "contractAddress",
+            "$ref": "#/components/schemas/H160"
+          },
+          "cumulativeGasUsed": {
+            "title": "cumulativeGasUsed",
+            "$ref": "#/components/schemas/U256"
+          },
+          "effectiveGasPrice": {
+            "title": "effectiveGasPrice",
+            "$ref": "#/components/schemas/U256"
+          },
+          "from": {
+            "title": "from",
+            "$ref": "#/components/schemas/H160"
+          },
+          "gasUsed": {
+            "title": "gasUsed",
+            "$ref": "#/components/schemas/U256"
+          },
+          "logs": {
+            "type": "array",
+            "title": "logs",
+            "items": {
+              "title": "Log",
+              "$ref": "#/components/schemas/Log"
+            }
+          },
+          "logsBloom": {
+            "title": "logsBloom",
+            "$ref": "#/components/schemas/H2048"
+          },
+          "statusCode": {
+            "title": "statusCode",
+            "$ref": "#/components/schemas/U64"
+          },
+          "to": {
+            "nullable": true,
+            "title": "to",
+            "$ref": "#/components/schemas/H160"
+          },
+          "transactionHash": {
+            "title": "transactionHash",
+            "$ref": "#/components/schemas/H256"
+          },
+          "transactionIndex": {
+            "title": "transactionIndex",
+            "$ref": "#/components/schemas/U256"
+          },
+          "txExecErrorMsg": {
+            "nullable": true,
+            "title": "txExecErrorMsg",
+            "$ref": "#/components/schemas/String"
+          }
+        }
+      },
+      "String": {
+        "type": "string",
+        "pattern": "^.*$"
+      },
+      "SyncInfo": {
+        "type": "object",
+        "title": "/// Sync info\n#[derive(Default, Debug, Serialize, PartialEq)]\n#[serde(rename_all = \"camelCase\")]",
+        "properties": {
+          "currentBlock": {
+            "title": "currentBlock",
+            "$ref": "#/components/schemas/U256"
+          },
+          "highestBlock": {
+            "title": "highestBlock",
+            "$ref": "#/components/schemas/U256"
+          },
+          "startingBlock": {
+            "title": "startingBlock",
+            "$ref": "#/components/schemas/U256"
+          },
+          "warpChunksAmount": {
+            "nullable": true,
+            "title": "warpChunksAmount",
+            "$ref": "#/components/schemas/U256"
+          },
+          "warpChunksProcessed": {
+            "nullable": true,
+            "title": "warpChunksProcessed",
+            "$ref": "#/components/schemas/U256"
+          }
+        }
+      },
+      "SyncStatus": {
+        "title": "/// Sync status\n#[derive(Debug, PartialEq)]",
+        "oneOf": [
+          {
+            "title": "SyncInfo",
+            "$ref": "#/components/schemas/SyncInfo"
+          },
+          {
+            "enum": [
+              "none"
+            ]
+          }
+        ]
+      },
+      "Topic": {
+        "nullable": true,
+        "oneOf": [
+          {
+            "title": "H256",
+            "$ref": "#/components/schemas/H256"
+          },
+          {
+            "type": "array",
+            "items": {
+              "title": "H256",
+              "$ref": "#/components/schemas/H256"
+            }
+          }
+        ]
+      },
+      "Transaction": {
+        "type": "object",
+        "title": "/// Transaction\n#[derive(Debug, Default, Clone, PartialEq, Serialize)]\n#[serde(rename_all = \"camelCase\")]",
+        "properties": {
+          "blockHash": {
+            "nullable": true,
+            "title": "blockHash",
+            "$ref": "#/components/schemas/H256"
+          },
+          "blockNumber": {
+            "nullable": true,
+            "title": "blockNumber",
+            "$ref": "#/components/schemas/U256"
+          },
+          "chainId": {
+            "nullable": true,
+            "title": "chainId",
+            "$ref": "#/components/schemas/U64"
+          },
+          "creates": {
+            "nullable": true,
+            "title": "creates",
+            "$ref": "#/components/schemas/H160"
+          },
+          "from": {
+            "title": "from",
+            "$ref": "#/components/schemas/H160"
+          },
+          "gas": {
+            "title": "gas",
+            "$ref": "#/components/schemas/U256"
+          },
+          "gasPrice": {
+            "title": "gasPrice",
+            "$ref": "#/components/schemas/U256"
+          },
+          "hash": {
+            "title": "hash",
+            "$ref": "#/components/schemas/H256"
+          },
+          "input": {
+            "title": "input",
+            "$ref": "#/components/schemas/Bytes"
+          },
+          "maxFeePerGas": {
+            "nullable": true,
+            "title": "maxFeePerGas",
+            "$ref": "#/components/schemas/U256"
+          },
+          "nonce": {
+            "title": "nonce",
+            "$ref": "#/components/schemas/U256"
+          },
+          "publicKey": {
+            "nullable": true,
+            "title": "publicKey",
+            "$ref": "#/components/schemas/H512"
+          },
+          "r": {
+            "title": "r",
+            "$ref": "#/components/schemas/U256"
+          },
+          "raw": {
+            "title": "raw",
+            "$ref": "#/components/schemas/Bytes"
+          },
+          "s": {
+            "title": "s",
+            "$ref": "#/components/schemas/U256"
+          },
+          "standardV": {
+            "nullable": true,
+            "title": "standardV",
+            "$ref": "#/components/schemas/U256"
+          },
+          "status": {
+            "nullable": true,
+            "title": "status",
+            "$ref": "#/components/schemas/U64"
+          },
+          "to": {
+            "nullable": true,
+            "title": "to",
+            "$ref": "#/components/schemas/H160"
+          },
+          "transactionIndex": {
+            "nullable": true,
+            "title": "transactionIndex",
+            "$ref": "#/components/schemas/U256"
+          },
+          "v": {
+            "title": "v",
+            "$ref": "#/components/schemas/U256"
+          },
+          "value": {
+            "title": "value",
+            "$ref": "#/components/schemas/U256"
+          }
+        }
+      },
+      "U256": {
+        "type": "string",
+        "pattern": "^0x([1-9a-f][0-9a-f]{0,63}|0)$"
+      },
+      "U64": {
+        "type": "string",
+        "pattern": "^0x([1-9a-f][0-9a-f]{0,15}|0)$"
+      },
+      "bool": {
+        "type": "boolean"
+      },
+      "usize": {
+        "type": "number"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "BlockNumber": {
+    "title": "Block Number or Tags",
+    "oneOf": [
+      {
+        "title": "U64",
+        "$ref": "#/components/schemas/U64"
+      },
+      {
+        "enum": [
+          "earliest",
+          "latest",
+          "pending"
+        ]
+      }
+    ]
+  }
+}
