@@ -13,7 +13,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/String"
-        }
+        },
+        "name": "web3_clientVersion-result"
       }
     },
     {
@@ -23,7 +24,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/String"
-        }
+        },
+        "name": "net_version-result"
       }
     },
     {
@@ -33,7 +35,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/String"
-        }
+        },
+        "name": "eth_protocolVersion-result"
       }
     },
     {
@@ -43,7 +46,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/SyncStatus"
-        }
+        },
+        "name": "eth_syncing-result"
       }
     },
     {
@@ -53,7 +57,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/U256"
-        }
+        },
+        "name": "eth_hashrate-result"
       }
     },
     {
@@ -63,7 +68,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/H160"
-        }
+        },
+        "name": "eth_coinbase-result"
       }
     },
     {
@@ -73,7 +79,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/bool"
-        }
+        },
+        "name": "eth_mining-result"
       }
     },
     {
@@ -84,7 +91,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/U64"
-        }
+        },
+        "name": "eth_chainId-result"
       }
     },
     {
@@ -94,7 +102,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/U256"
-        }
+        },
+        "name": "eth_gasPrice-result"
       }
     },
     {
@@ -104,7 +113,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/U256"
-        }
+        },
+        "name": "eth_maxPriorityFeePerGas-result"
       }
     },
     {
@@ -117,7 +127,8 @@
           "items": {
             "$ref": "#/components/schemas/H160"
           }
-        }
+        },
+        "name": "eth_accounts-result"
       }
     },
     {
@@ -127,7 +138,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/U256"
-        }
+        },
+        "name": "eth_blockNumber-result"
       }
     },
     {
@@ -152,7 +164,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/U256"
-        }
+        },
+        "name": "eth_getBalance-result"
       }
     },
     {
@@ -184,7 +197,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/H256"
-        }
+        },
+        "name": "eth_getStorageAt-result"
       }
     },
     {
@@ -210,7 +224,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/Block"
-        }
+        },
+        "name": "eth_getBlockByHash-result"
       }
     },
     {
@@ -236,7 +251,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/Block"
-        }
+        },
+        "name": "eth_getBlockByNumber-result"
       }
     },
     {
@@ -261,7 +277,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/U256"
-        }
+        },
+        "name": "eth_getTransactionCount-result"
       }
     },
     {
@@ -280,7 +297,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/U256"
-        }
+        },
+        "name": "eth_getBlockTransactionCountByHash-result"
       }
     },
     {
@@ -299,7 +317,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/U256"
-        }
+        },
+        "name": "eth_getBlockTransactionCountByNumber-result"
       }
     },
     {
@@ -318,7 +337,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/U256"
-        }
+        },
+        "name": "eth_getUncleCountByBlockHash-result"
       }
     },
     {
@@ -337,7 +357,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/U256"
-        }
+        },
+        "name": "eth_getUncleCountByBlockNumber-result"
       }
     },
     {
@@ -362,7 +383,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/Bytes"
-        }
+        },
+        "name": "eth_getCode-result"
       }
     },
     {
@@ -380,7 +402,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/H256"
-        }
+        },
+        "name": "eth_sendRawTransaction-result"
       }
     },
     {
@@ -398,7 +421,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/H256"
-        }
+        },
+        "name": "eth_submitTransaction-result"
       }
     },
     {
@@ -423,7 +447,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/Bytes"
-        }
+        },
+        "name": "eth_call-result"
       }
     },
     {
@@ -448,7 +473,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/U256"
-        }
+        },
+        "name": "eth_estimateGas-result"
       }
     },
     {
@@ -467,7 +493,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/Transaction"
-        }
+        },
+        "name": "eth_getTransactionByHash-result"
       }
     },
     {
@@ -493,7 +520,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/Transaction"
-        }
+        },
+        "name": "eth_getTransactionByBlockHashAndIndex-result"
       }
     },
     {
@@ -519,7 +547,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/Transaction"
-        }
+        },
+        "name": "eth_getTransactionByBlockNumberAndIndex-result"
       }
     },
     {
@@ -538,7 +567,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/Receipt"
-        }
+        },
+        "name": "eth_getTransactionReceipt-result"
       }
     },
     {
@@ -564,7 +594,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/Block"
-        }
+        },
+        "name": "eth_getUncleByBlockHashAndIndex-result"
       }
     },
     {
@@ -590,7 +621,8 @@
         "schema": {
           "nullable": true,
           "$ref": "#/components/schemas/Block"
-        }
+        },
+        "name": "eth_getUncleByBlockNumberAndIndex-result"
       }
     },
     {
@@ -611,7 +643,8 @@
           "items": {
             "$ref": "#/components/schemas/Log"
           }
-        }
+        },
+        "name": "eth_getLogs-result"
       }
     },
     {
@@ -636,7 +669,8 @@
       "result": {
         "schema": {
           "$ref": "#/components/schemas/bool"
-        }
+        },
+        "name": "eth_submitHashrate-result"
       }
     },
     {
@@ -657,7 +691,8 @@
           "items": {
             "$ref": "#/components/schemas/Receipt"
           }
-        }
+        },
+        "name": "parity_getBlockReceipts-result"
       }
     }
   ],
@@ -854,7 +889,7 @@
       },
       "EthRpcLogFilter": {
         "type": "object",
-        "title": "/// Filter Address\npub type FilterAddress = VariadicValue\u003cH160\u003e;\n/// Topic\npub type Topic = VariadicValue\u003cH256\u003e;\n\n/// Filter\n#[derive(Debug, PartialEq, Clone, Deserialize, Eq, Hash)]\n#[serde(deny_unknown_fields)]\n#[serde(rename_all = \"camelCase\")]",
+        "title": "/// Filter Address\npub type FilterAddress = VariadicValue<H160>;\n/// Topic\npub type Topic = VariadicValue<H256>;\n\n/// Filter\n#[derive(Debug, PartialEq, Clone, Deserialize, Eq, Hash)]\n#[serde(deny_unknown_fields)]\n#[serde(rename_all = \"camelCase\")]",
         "properties": {
           "address": {
             "nullable": true,
