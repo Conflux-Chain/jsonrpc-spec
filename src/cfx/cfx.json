@@ -1,10 +1,26 @@
 {
   "openrpc": "1.2.6",
   "info": {
-    "title": "Cfx",
+    "title": "Conflux JSON-RPC Specification",
     "version": "0.1.0",
-    "description": " Cfx rpc interface.\n"
+    "license": {
+			"name": "CC0-1.0",
+			"url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+		},
+    "description": "A specification of the standard interface for Conflux clients."
   },
+  "servers": [
+    {
+      "name": "Mainnet RPC",
+      "url": "https://main.confluxrpc.com",
+      "summary": "The mainnet RPC server for Conflux. chainId: 1029"
+    },
+    {
+      "name": "Testnet RPC",
+      "url": "https://main.confluxrpc.com",
+      "summary": "The testnet RPC server for Conflux. chainId: 1"
+    }
+  ],
   "methods": [
     {
       "name": "cfx_gasPrice",
