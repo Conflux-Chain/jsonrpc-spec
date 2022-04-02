@@ -1,12 +1,31 @@
 {
+ "openrpc": "1.2.6",
  "info": {
-  "title": "EthFilter",
-  "description": " Eth filters rpc api (polling).\n"
+  "title": "Ethereum JSON-RPC Specification for namespace EthFilter",
+  "description": "A specification of the standard interface of Ethereum clients.",
+  "license": {
+   "name": "CC0-1.0",
+   "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+  },
+  "version": "0.1.0"
  },
+ "servers": [
+  {
+   "name": "eSpace mainnet RPC",
+   "url": "https://evm.confluxrpc.com",
+   "summary": "The mainnet RPC server for Conflux eSpace. chainId: 1030"
+  },
+  {
+   "name": "eSpace testnet RPC",
+   "url": "https://evmtestnet.confluxrpc.com",
+   "summary": "The testnet RPC server for Conflux eSpace. chainId: 71"
+  }
+ ],
  "methods": [
   {
    "name": "eth_newFilter",
-   "summary": "/// Returns id of new filter.\n    ",
+   "summary": "Creates a filter object, based on filter options, to notify when the state changes (logs). To check if the state has changed, call eth_getFilterChanges.",
+   "description": "The filter ID for use in `eth_getFilterChanges`",
    "params": [
     {
      "name": "_",
@@ -17,6 +36,7 @@
     }
    ],
    "result": {
+    "name": "filterId",
     "schema": {
      "$ref": "#/components/schemas/U256"
     }
@@ -24,7 +44,7 @@
   },
   {
    "name": "eth_newBlockFilter",
-   "summary": "/// Returns id of new block filter.\n    ",
+   "summary": "Creates a filter in the node, to notify when a new block arrives. To check if the state has changed, call eth_getFilterChanges.",
    "params": [],
    "result": {
     "schema": {
@@ -34,7 +54,7 @@
   },
   {
    "name": "eth_newPendingTransactionFilter",
-   "summary": "/// Returns id of new block filter.\n    ",
+   "summary": "Creates a filter in the node, to notify when new pending transactions arrive. To check if the state has changed, call eth_getFilterChanges.",
    "params": [],
    "result": {
     "schema": {
@@ -44,7 +64,7 @@
   },
   {
    "name": "eth_getFilterChanges",
-   "summary": "/// Returns filter changes since last poll.\n    ",
+   "summary": "Polling method for a filter, which returns an array of logs which occurred since last poll.",
    "params": [
     {
      "name": "_",
@@ -55,6 +75,7 @@
     }
    ],
    "result": {
+    "name": "logResult",
     "schema": {
      "$ref": "#/components/schemas/FilterChanges"
     }
@@ -62,7 +83,7 @@
   },
   {
    "name": "eth_getFilterLogs",
-   "summary": "/// Returns all logs matching given filter (in a range 'from' - 'to').\n    ",
+   "summary": "Returns an array of all logs matching filter with given id.",
    "params": [
     {
      "name": "_",
@@ -83,7 +104,8 @@
   },
   {
    "name": "eth_uninstallFilter",
-   "summary": "/// Uninstalls filter.\n    ",
+   "summary": "Uninstalls a filter with given id. Should always be called when watch is no longer needed. Additionally Filters timeout when they aren't requested with eth_getFilterChanges for a period of time.",
+   "description": "returns true if the filter was successfully uninstalled, false otherwise.",
    "params": [
     {
      "name": "_",
@@ -94,6 +116,7 @@
     }
    ],
    "result": {
+    "name": "filterUninstalledSuccess",
     "schema": {
      "$ref": "#/components/schemas/bool"
     }
@@ -103,7 +126,47 @@
  "components": {
   "schemas": {
    "BlockNumber": {
-    "title": "/// Represents rpc api block number param.\n#[derive(Debug, PartialEq, Clone, Hash, Eq)]"
+    "title": "Block Number or Tags",
+    "oneOf": [
+     {
+      "title": "U64",
+      "$ref": "#/components/schemas/U64"
+     },
+     {
+      "type": "object",
+      "title": "BlockHash",
+      "required": [
+       "blockHash"
+      ],
+      "properties": {
+       "blockHash": {
+        "$ref": "#/components/schemas/H256"
+       },
+       "requireCanonical": {
+        "type": "boolean"
+       }
+      }
+     },
+     {
+      "type": "object",
+      "title": "BlockNumber",
+      "required": [
+       "blockNumber"
+      ],
+      "properties": {
+       "blockNumber": {
+        "$ref": "#/components/schemas/U64"
+       }
+      }
+     },
+     {
+      "enum": [
+       "earliest",
+       "latest",
+       "pending"
+      ]
+     }
+    ]
    },
    "Bytes": {
     "type": "string",
@@ -111,7 +174,7 @@
    },
    "EthRpcLogFilter": {
     "type": "object",
-    "title": "/// Filter Address\npub type FilterAddress = VariadicValue\u003cH160\u003e;\n/// Topic\npub type Topic = VariadicValue\u003cH256\u003e;\n\n/// Filter\n#[derive(Debug, PartialEq, Clone, Deserialize, Eq, Hash)]\n#[serde(deny_unknown_fields)]\n#[serde(rename_all = \"camelCase\")]",
+    "title": "Filter Addresspub type FilterAddress = VariadicValue\u003cH160\u003e; Topicpub type Topic = VariadicValue\u003cH256\u003e; Filter",
     "properties": {
      "address": {
       "nullable": true,
@@ -166,7 +229,7 @@
     ]
    },
    "FilterChanges": {
-    "title": "/// Results of the filter_changes RPC.\n#[derive(Debug, PartialEq)]",
+    "title": "Results of the filter_changes RPC.",
     "oneOf": [
      {
       "type": "array",
@@ -203,7 +266,7 @@
    },
    "Log": {
     "type": "object",
-    "title": "/// Log\n#[derive(Debug, Serialize, PartialEq, Eq, Hash, Clone)]\n#[serde(rename_all = \"camelCase\")]",
+    "title": "Log",
     "properties": {
      "address": {
       "title": "address",
@@ -272,6 +335,10 @@
    "U256": {
     "type": "string",
     "pattern": "^0x([1-9a-f][0-9a-f]{0,63}|0)$"
+   },
+   "U64": {
+    "type": "string",
+    "pattern": "^0x([1-9a-f][0-9a-f]{0,15}|0)$"
    },
    "bool": {
     "type": "boolean"
