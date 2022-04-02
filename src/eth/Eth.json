@@ -130,7 +130,7 @@
   },
   {
    "name": "eth_maxPriorityFeePerGas",
-   "summary": "/// Returns current max_priority_fee\n    ",
+   "summary": "Returns current max_priority_fee",
    "params": [],
    "result": {
     "schema": {
@@ -140,7 +140,7 @@
   },
   {
    "name": "eth_accounts",
-   "summary": "/// Returns accounts list.\n    ",
+   "summary": "Returns accounts list.",
    "params": [],
    "result": {
     "schema": {
@@ -430,7 +430,7 @@
   },
   {
    "name": "eth_submitTransaction",
-   "summary": "/// @alias of `eth_sendRawTransaction`.\n    ",
+   "summary": "@alias of `eth_sendRawTransaction`.",
    "params": [
     {
      "name": "_",
@@ -697,7 +697,6 @@
   },
   {
    "name": "parity_getBlockReceipts",
-   "summary": "\n\n    ",
    "params": [
     {
      "name": "_",
