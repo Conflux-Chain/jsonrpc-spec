@@ -828,8 +828,7 @@
       "type": "object",
       "title": "BlockHash",
       "required": [
-       "blockHash",
-       "requireCanonical"
+       "blockHash"
       ],
       "properties": {
        "blockHash": {
