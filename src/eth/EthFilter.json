@@ -47,7 +47,7 @@
    "summary": "Creates a filter in the node, to notify when a new block arrives. To check if the state has changed, call eth_getFilterChanges.",
    "params": [],
    "result": {
-    "name": "eth_newBlockFilter_result",
+    "name": "eth_newBlockFilter-result",
     "schema": {
      "$ref": "#/components/schemas/U256"
     }
@@ -58,7 +58,7 @@
    "summary": "Creates a filter in the node, to notify when new pending transactions arrive. To check if the state has changed, call eth_getFilterChanges.",
    "params": [],
    "result": {
-    "name": "eth_newPendingTransactionFilter_result",
+    "name": "eth_newPendingTransactionFilter-result",
     "schema": {
      "$ref": "#/components/schemas/U256"
     }
@@ -96,7 +96,7 @@
     }
    ],
    "result": {
-    "name": "eth_getFilterLogs_result",
+    "name": "eth_getFilterLogs-result",
     "schema": {
      "type": "array",
      "items": {

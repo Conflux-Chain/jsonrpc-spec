@@ -123,7 +123,7 @@
    "summary": "Returns the current price per gas in wei",
    "params": [],
    "result": {
-    "name": "eth_gasPrice_result",
+    "name": "eth_gasPrice-result",
     "schema": {
      "$ref": "#/components/schemas/U256"
     }
@@ -134,7 +134,7 @@
    "summary": "Returns current max_priority_fee",
    "params": [],
    "result": {
-    "name": "eth_maxPriorityFeePerGas_result",
+    "name": "eth_maxPriorityFeePerGas-result",
     "schema": {
      "$ref": "#/components/schemas/U256"
     }
@@ -145,7 +145,7 @@
    "summary": "Returns accounts list.",
    "params": [],
    "result": {
-    "name": "eth_accounts_result",
+    "name": "eth_accounts-result",
     "schema": {
      "type": "array",
      "items": {
@@ -159,7 +159,7 @@
    "summary": "Returns the number of most recent block.",
    "params": [],
    "result": {
-    "name": "eth_blockNumber_result",
+    "name": "eth_blockNumber-result",
     "schema": {
      "$ref": "#/components/schemas/U256"
     }
@@ -380,7 +380,7 @@
     }
    ],
    "result": {
-    "name": "eth_getUncleCountByBlockNumber_result",
+    "name": "eth_getUncleCountByBlockNumber-result",
     "schema": {
      "nullable": true,
      "$ref": "#/components/schemas/U256"
@@ -446,7 +446,7 @@
     }
    ],
    "result": {
-    "name": "eth_submitTransaction_result",
+    "name": "eth_submitTransaction-result",
     "schema": {
      "$ref": "#/components/schemas/H256"
     }
@@ -519,7 +519,7 @@
     }
    ],
    "result": {
-    "name": "eth_getTransactionByHash_result",
+    "name": "eth_getTransactionByHash-result",
     "schema": {
      "nullable": true,
      "$ref": "#/components/schemas/Transaction"
@@ -546,7 +546,7 @@
     }
    ],
    "result": {
-    "name": "eth_getTransactionByBlockHashAndIndex_result",
+    "name": "eth_getTransactionByBlockHashAndIndex-result",
     "schema": {
      "nullable": true,
      "$ref": "#/components/schemas/Transaction"
@@ -573,7 +573,7 @@
     }
    ],
    "result": {
-    "name": "eth_getTransactionByBlockNumberAndIndex_result",
+    "name": "eth_getTransactionByBlockNumberAndIndex-result",
     "schema": {
      "nullable": true,
      "$ref": "#/components/schemas/Transaction"
@@ -669,7 +669,7 @@
     }
    ],
    "result": {
-    "name": "eth_getLogs_result",
+    "name": "eth_getLogs-result",
     "schema": {
      "type": "array",
      "items": {
@@ -717,7 +717,7 @@
     }
    ],
    "result": {
-    "name": "parity_getBlockReceipts_result",
+    "name": "parity_getBlockReceipts-result",
     "schema": {
      "type": "array",
      "items": {
