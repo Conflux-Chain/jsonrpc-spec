@@ -170,14 +170,14 @@
    "summary": "Returns Ether balance of a given or account or contract",
    "params": [
     {
-     "name": "_",
+     "name": "address",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/H160"
      }
     },
     {
-     "name": "_",
+     "name": "blockNumber",
      "schema": {
       "nullable": true,
       "$ref": "#/components/schemas/BlockNumber"
@@ -196,21 +196,21 @@
    "summary": "Gets a storage value from a contract address, a position, and an optional blockNumber",
    "params": [
     {
-     "name": "_",
+     "name": "address",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/H160"
      }
     },
     {
-     "name": "_",
+     "name": "position",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/U256"
      }
     },
     {
-     "name": "_",
+     "name": "blocknumber",
      "schema": {
       "nullable": true,
       "$ref": "#/components/schemas/BlockNumber"
@@ -229,14 +229,14 @@
    "summary": "Gets a block for a given hash",
    "params": [
     {
-     "name": "_",
+     "name": "blockHash",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/H256"
      }
     },
     {
-     "name": "_",
+     "name": "includeTransactions",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/bool"
@@ -256,14 +256,14 @@
    "summary": "Gets a block for a given number",
    "params": [
     {
-     "name": "_",
+     "name": "blocknumber",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/BlockNumber"
      }
     },
     {
-     "name": "_",
+     "name": "includeTransactions",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/bool"
@@ -283,14 +283,14 @@
    "summary": "Returns the number of transactions sent from an address",
    "params": [
     {
-     "name": "_",
+     "name": "address",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/H160"
      }
     },
     {
-     "name": "_",
+     "name": "blocknumber",
      "schema": {
       "nullable": true,
       "$ref": "#/components/schemas/BlockNumber"
@@ -310,7 +310,7 @@
    "description": "The Number of total transactions in the given block",
    "params": [
     {
-     "name": "_",
+     "name": "blockhash",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/H256"
@@ -331,7 +331,7 @@
    "description": "The Number of total transactions in the given block",
    "params": [
     {
-     "name": "_",
+     "name": "blocknumber",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/BlockNumber"
@@ -352,7 +352,7 @@
    "description": "The Number of total uncles in the given block",
    "params": [
     {
-     "name": "_",
+     "name": "blockhash",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/H256"
@@ -372,7 +372,7 @@
    "summary": "Returns the number of uncles in a block from a block matching the given block number.",
    "params": [
     {
-     "name": "_",
+     "name": "blocknumber",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/BlockNumber"
@@ -392,14 +392,14 @@
    "summary": "Returns code at a given contract address",
    "params": [
     {
-     "name": "_",
+     "name": "address",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/H160"
      }
     },
     {
-     "name": "_",
+     "name": "blockNumber",
      "schema": {
       "nullable": true,
       "$ref": "#/components/schemas/BlockNumber"
@@ -419,7 +419,7 @@
    "description": "The transaction hash, or the zero hash if the transaction is not yet available.",
    "params": [
     {
-     "name": "_",
+     "name": "signedTransactionData",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/Bytes"
@@ -438,7 +438,7 @@
    "summary": "@alias of `eth_sendRawTransaction`.",
    "params": [
     {
-     "name": "_",
+     "name": "bytes",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/Bytes"
@@ -458,14 +458,14 @@
    "description": "The return value of the executed contract",
    "params": [
     {
-     "name": "_",
+     "name": "transaction",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/CallRequest"
      }
     },
     {
-     "name": "_",
+     "name": "blocknumber",
      "schema": {
       "nullable": true,
       "$ref": "#/components/schemas/BlockNumber"
@@ -485,14 +485,14 @@
    "description": "The amount of gas used",
    "params": [
     {
-     "name": "_",
+     "name": "callrequest",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/CallRequest"
      }
     },
     {
-     "name": "_",
+     "name": "blocknumber",
      "schema": {
       "nullable": true,
       "$ref": "#/components/schemas/BlockNumber"
@@ -511,7 +511,7 @@
    "summary": "Returns the information about a transaction requested by transaction hash.",
    "params": [
     {
-     "name": "_",
+     "name": "transactionhash",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/H256"
@@ -531,14 +531,14 @@
    "summary": "Returns the information about a transaction requested by the block hash and index of which it was mined.",
    "params": [
     {
-     "name": "_",
+     "name": "blockhash",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/H256"
      }
     },
     {
-     "name": "_",
+     "name": "index",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/Index"
@@ -558,14 +558,14 @@
    "summary": "Returns the information about a transaction requested by the block number and index of which it was mined.",
    "params": [
     {
-     "name": "_",
+     "name": "blocknumber",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/BlockNumber"
      }
     },
     {
-     "name": "_",
+     "name": "index",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/Index"
@@ -586,7 +586,7 @@
    "description": "returns either a receipt or null",
    "params": [
     {
-     "name": "_",
+     "name": "transactionhash",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/H256"
@@ -606,14 +606,14 @@
    "summary": "Returns information about a uncle of a block by hash and uncle index position.",
    "params": [
     {
-     "name": "_",
+     "name": "blockhash",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/H256"
      }
     },
     {
-     "name": "_",
+     "name": "index",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/Index"
@@ -634,14 +634,14 @@
    "description": "returns an uncle block or null",
    "params": [
     {
-     "name": "_",
+     "name": "uncleBlockNumber",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/BlockNumber"
      }
     },
     {
-     "name": "_",
+     "name": "index",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/Index"
@@ -661,7 +661,7 @@
    "summary": "Returns an array of all logs matching a given filter object.",
    "params": [
     {
-     "name": "_",
+     "name": "filter",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/EthRpcLogFilter"
@@ -684,14 +684,14 @@
    "description": "whether of not submitting went through successfully",
    "params": [
     {
-     "name": "_",
+     "name": "hashRate",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/U256"
      }
     },
     {
-     "name": "_",
+     "name": "id",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/H256"
@@ -709,7 +709,7 @@
    "name": "parity_getBlockReceipts",
    "params": [
     {
-     "name": "_",
+     "name": "blocknumber",
      "schema": {
       "nullable": true,
       "$ref": "#/components/schemas/BlockNumber"

@@ -28,7 +28,7 @@
    "description": "The filter ID for use in `eth_getFilterChanges`",
    "params": [
     {
-     "name": "_",
+     "name": "filter",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/EthRpcLogFilter"
@@ -69,7 +69,7 @@
    "summary": "Polling method for a filter, which returns an array of logs which occurred since last poll.",
    "params": [
     {
-     "name": "_",
+     "name": "filterId",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/Index"
@@ -88,7 +88,7 @@
    "summary": "Returns an array of all logs matching filter with given id.",
    "params": [
     {
-     "name": "_",
+     "name": "filterId",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/Index"
@@ -111,7 +111,7 @@
    "description": "returns true if the filter was successfully uninstalled, false otherwise.",
    "params": [
     {
-     "name": "_",
+     "name": "filterId",
      "required": true,
      "schema": {
       "$ref": "#/components/schemas/Index"
