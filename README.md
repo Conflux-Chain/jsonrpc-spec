@@ -4,8 +4,8 @@ The Conflux JSON-RPC is a collection of methods. This interface allows downstrea
 
 ## Online Viewer
 
-* [cfx namespace methods](https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/conflux-chain/jsonrpc-spec/main/src/cfx/cfx.json&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar])
-* [eth namespace methods](https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/conflux-chain/jsonrpc-spec/main/src/eth/eth.json&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar])
+* [cfx namespace methods](https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/Conflux-Chain/jsonrpc-spec/main/src/cfx/cfx.json&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar])
+* [eth namespace methods](https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/Conflux-Chain/jsonrpc-spec/main/src/eth/Eth.json&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar])
 
 ## How to run MockServer
 
