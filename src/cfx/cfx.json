@@ -4,9 +4,9 @@
     "title": "Conflux JSON-RPC Specification",
     "version": "0.1.0",
     "license": {
-			"name": "CC0-1.0",
-			"url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
-		},
+      "name": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+    },
     "description": "A specification of the standard interface for Conflux clients."
   },
   "servers": [
@@ -69,12 +69,12 @@
           "params": [
             {
               "name": "epoch_number",
-              "value": "0x42219eb"
+              "value": "0x4350b21"
             }
           ],
           "result": {
             "name": "cfx_epochNumber-Result",
-            "value": "0x42219eb"
+            "value": "0x4350b21"
           }
         },
         {
@@ -88,7 +88,7 @@
           ],
           "result": {
             "name": "cfx_epochNumber-Result",
-            "value": "0x4221ac9"
+            "value": "0x4351322"
           }
         },
         {
@@ -116,7 +116,7 @@
           ],
           "result": {
             "name": "cfx_epochNumber-Result",
-            "value": "0x4221ac5"
+            "value": "0x435131e"
           }
         },
         {
@@ -130,7 +130,7 @@
           ],
           "result": {
             "name": "cfx_epochNumber-Result",
-            "value": "0x4221a91"
+            "value": "0x43512e6"
           }
         },
         {
@@ -144,7 +144,7 @@
           ],
           "result": {
             "name": "cfx_epochNumber-Result",
-            "value": "0x422190c"
+            "value": "0x43510d4"
           }
         },
         {
@@ -158,7 +158,7 @@
           ],
           "result": {
             "name": "cfx_epochNumber-Result",
-            "value": "0x42084c0"
+            "value": "0x433bea0"
           }
         }
       ]
@@ -242,7 +242,7 @@
             "name": "cfx_getBalance-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343937, optimistic_executed_height: Some(69343937) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587159, optimistic_executed_height: Some(70587157) }"
             }
           }
         },
@@ -317,7 +317,7 @@
             "name": "cfx_getBalance-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343937, optimistic_executed_height: Some(69343937) }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587159, optimistic_executed_height: Some(70587157) }"
             }
           }
         },
@@ -360,7 +360,7 @@
             "name": "cfx_getBalance-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: None }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587159, optimistic_executed_height: Some(70587158) }"
             }
           }
         }
@@ -446,7 +446,7 @@
             "name": "cfx_getAdmin-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343939) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: None }"
             }
           }
         },
@@ -521,7 +521,7 @@
             "name": "cfx_getAdmin-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343939) }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: Some(70587161) }"
             }
           }
         },
@@ -564,7 +564,7 @@
             "name": "cfx_getAdmin-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343939) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: Some(70587161) }"
             }
           }
         }
@@ -655,7 +655,7 @@
             "name": "cfx_getSponsorInfo-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343940) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: Some(70587163) }"
             }
           }
         },
@@ -748,7 +748,7 @@
             "name": "cfx_getSponsorInfo-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343940) }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: Some(70587163) }"
             }
           }
         },
@@ -791,7 +791,7 @@
             "name": "cfx_getSponsorInfo-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343940) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: Some(70587163) }"
             }
           }
         }
@@ -876,7 +876,7 @@
             "name": "cfx_getStakingBalance-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: None }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587159, optimistic_executed_height: Some(70587158) }"
             }
           }
         },
@@ -951,7 +951,7 @@
             "name": "cfx_getStakingBalance-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: None }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587159, optimistic_executed_height: Some(70587159) }"
             }
           }
         },
@@ -994,7 +994,7 @@
             "name": "cfx_getStakingBalance-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: None }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587159, optimistic_executed_height: Some(70587159) }"
             }
           }
         }
@@ -1082,7 +1082,7 @@
             "name": "cfx_getDepositList-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343941) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587167, optimistic_executed_height: Some(70587165) }"
             }
           }
         },
@@ -1157,7 +1157,7 @@
             "name": "cfx_getDepositList-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343941) }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587167, optimistic_executed_height: Some(70587165) }"
             }
           }
         },
@@ -1200,7 +1200,7 @@
             "name": "cfx_getDepositList-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343941) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587167, optimistic_executed_height: Some(70587166) }"
             }
           }
         }
@@ -1288,7 +1288,7 @@
             "name": "cfx_getVoteList-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343945, optimistic_executed_height: None }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587167, optimistic_executed_height: Some(70587167) }"
             }
           }
         },
@@ -1363,7 +1363,7 @@
             "name": "cfx_getVoteList-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343945, optimistic_executed_height: None }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587167, optimistic_executed_height: Some(70587167) }"
             }
           }
         },
@@ -1406,7 +1406,7 @@
             "name": "cfx_getVoteList-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343945, optimistic_executed_height: None }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587167, optimistic_executed_height: Some(70587167) }"
             }
           }
         }
@@ -1491,7 +1491,7 @@
             "name": "cfx_getCollateralForStorage-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: None }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587159, optimistic_executed_height: Some(70587159) }"
             }
           }
         },
@@ -1566,7 +1566,7 @@
             "name": "cfx_getCollateralForStorage-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: None }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: None }"
             }
           }
         },
@@ -1609,7 +1609,7 @@
             "name": "cfx_getCollateralForStorage-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343939) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: None }"
             }
           }
         }
@@ -1694,7 +1694,7 @@
             "name": "cfx_getCode-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343939) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: Some(70587161) }"
             }
           }
         },
@@ -1769,7 +1769,7 @@
             "name": "cfx_getCode-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343940) }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: Some(70587162) }"
             }
           }
         },
@@ -1812,7 +1812,7 @@
             "name": "cfx_getCode-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343940) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: Some(70587162) }"
             }
           }
         }
@@ -1937,7 +1937,7 @@
             "name": "cfx_getStorageRoot-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343940) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: Some(70587162) }"
             }
           }
         },
@@ -2024,7 +2024,7 @@
             "name": "cfx_getStorageRoot-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343940) }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: Some(70587162) }"
             }
           }
         },
@@ -2067,7 +2067,7 @@
             "name": "cfx_getStorageRoot-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343940) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: Some(70587162) }"
             }
           }
         }
@@ -2235,7 +2235,7 @@
           "params": [
             {
               "name": "block_hash",
-              "value": "0x2f5a8cc1e5a41e77d25b53811e7bc83f78070f130b8a0336c14568e7fd13b8bb"
+              "value": "0xcb5ab41e48b58ee5f430ec3c1df69989ce09122bcc67be08b464496795054677"
             },
             {
               "name": "include_txs",
@@ -2247,27 +2247,27 @@
             "value": {
               "adaptive": false,
               "blame": "0x0",
-              "blockNumber": "0x53ab662",
+              "blockNumber": "0x5545c11",
               "custom": [
                 "0x01"
               ],
               "deferredLogsBloomHash": "0xd397b3b043d87fcd6fad1291ff0bfd16401c274896d8c63a923727f077b8e0b5",
-              "deferredReceiptsRoot": "0x09f8709ea9f344a810811a373b30861568f5686e649d6177fd92ea2db7477508",
-              "deferredStateRoot": "0x08078d1f6b5e1ad2d1bf926006c96c86f34a5d8ff67c9e4bb91177e7ffba6edc",
-              "difficulty": "0x2fd27e6",
-              "epochNumber": "0x4221a29",
+              "deferredReceiptsRoot": "0x0b574e2ff70d4a74fb818a655abc5c34c80743a05b29ae787c6d5498b7315dd9",
+              "deferredStateRoot": "0xc372e483f32b30993528ab8222a004c14bded5b057978f1c6cf8edac8a3c2c1f",
+              "difficulty": "0x32a2bd6",
+              "epochNumber": "0x4350b61",
               "gasLimit": "0x1c9c380",
               "gasUsed": "0x0",
-              "hash": "0x2f5a8cc1e5a41e77d25b53811e7bc83f78070f130b8a0336c14568e7fd13b8bb",
-              "height": "0x4221a29",
+              "hash": "0xcb5ab41e48b58ee5f430ec3c1df69989ce09122bcc67be08b464496795054677",
+              "height": "0x4350b61",
               "miner": "CFXTEST:TYPE.USER:AANG4D91REJDBPGMGTMSPDYEFXKUBJ2BBYWRWM9J3Z",
-              "nonce": "0x216522b394e9c347",
-              "parentHash": "0xbb9ed755a432b421c43957e2e8c2a1b1f54ddcd90e9c6c0bb119fbc6712d55e6",
-              "posReference": "0x5ba8d8f3bc733d9ab2735d7d061d4f42bca22374e024149e689cc5bcf0074370",
-              "powQuality": "0x19fa65d0a",
+              "nonce": "0x6b88339968544d14",
+              "parentHash": "0xdc800a6ebe164bcc7f9c6b70afcd7307503fc9e3385792aa794d0d631bc1a76d",
+              "posReference": "0x1806ad9776516ccb8ea2ba8de3c856895ece3021b79c653add2edba25d96f766",
+              "powQuality": "0x41009c5",
               "refereeHashes": [],
               "size": "0x0",
-              "timestamp": "0x6241862e",
+              "timestamp": "0x624e5b45",
               "transactions": [],
               "transactionsRoot": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
             }
@@ -2279,7 +2279,7 @@
           "params": [
             {
               "name": "block_hash",
-              "value": "0x2f5a8cc1e5a41e77d25b53811e7bc83f78070f130b8a0336c14568e7fd13b8bb"
+              "value": "0xcb5ab41e48b58ee5f430ec3c1df69989ce09122bcc67be08b464496795054677"
             },
             {
               "name": "include_txs",
@@ -2291,27 +2291,27 @@
             "value": {
               "adaptive": false,
               "blame": "0x0",
-              "blockNumber": "0x53ab662",
+              "blockNumber": "0x5545c11",
               "custom": [
                 "0x01"
               ],
               "deferredLogsBloomHash": "0xd397b3b043d87fcd6fad1291ff0bfd16401c274896d8c63a923727f077b8e0b5",
-              "deferredReceiptsRoot": "0x09f8709ea9f344a810811a373b30861568f5686e649d6177fd92ea2db7477508",
-              "deferredStateRoot": "0x08078d1f6b5e1ad2d1bf926006c96c86f34a5d8ff67c9e4bb91177e7ffba6edc",
-              "difficulty": "0x2fd27e6",
-              "epochNumber": "0x4221a29",
+              "deferredReceiptsRoot": "0x0b574e2ff70d4a74fb818a655abc5c34c80743a05b29ae787c6d5498b7315dd9",
+              "deferredStateRoot": "0xc372e483f32b30993528ab8222a004c14bded5b057978f1c6cf8edac8a3c2c1f",
+              "difficulty": "0x32a2bd6",
+              "epochNumber": "0x4350b61",
               "gasLimit": "0x1c9c380",
               "gasUsed": "0x0",
-              "hash": "0x2f5a8cc1e5a41e77d25b53811e7bc83f78070f130b8a0336c14568e7fd13b8bb",
-              "height": "0x4221a29",
+              "hash": "0xcb5ab41e48b58ee5f430ec3c1df69989ce09122bcc67be08b464496795054677",
+              "height": "0x4350b61",
               "miner": "CFXTEST:TYPE.USER:AANG4D91REJDBPGMGTMSPDYEFXKUBJ2BBYWRWM9J3Z",
-              "nonce": "0x216522b394e9c347",
-              "parentHash": "0xbb9ed755a432b421c43957e2e8c2a1b1f54ddcd90e9c6c0bb119fbc6712d55e6",
-              "posReference": "0x5ba8d8f3bc733d9ab2735d7d061d4f42bca22374e024149e689cc5bcf0074370",
-              "powQuality": "0x19fa65d0a",
+              "nonce": "0x6b88339968544d14",
+              "parentHash": "0xdc800a6ebe164bcc7f9c6b70afcd7307503fc9e3385792aa794d0d631bc1a76d",
+              "posReference": "0x1806ad9776516ccb8ea2ba8de3c856895ece3021b79c653add2edba25d96f766",
+              "powQuality": "0x41009c5",
               "refereeHashes": [],
               "size": "0x0",
-              "timestamp": "0x6241862e",
+              "timestamp": "0x624e5b45",
               "transactions": [],
               "transactionsRoot": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
             }
@@ -2398,29 +2398,29 @@
             "value": {
               "adaptive": false,
               "blame": "0x0",
-              "blockNumber": "0x53ab738",
+              "blockNumber": "0x5546676",
               "custom": [
                 "0x01"
               ],
               "deferredLogsBloomHash": "0xd397b3b043d87fcd6fad1291ff0bfd16401c274896d8c63a923727f077b8e0b5",
               "deferredReceiptsRoot": "0x09f8709ea9f344a810811a373b30861568f5686e649d6177fd92ea2db7477508",
-              "deferredStateRoot": "0xfd1dfed86a016f725a855908e1ddc74931c5ccdb9912330266ca919e8269df88",
-              "difficulty": "0x2fd27e6",
-              "epochNumber": "0x4221ac2",
+              "deferredStateRoot": "0x9207d655134e154139fbbbc21a604df20006e9bc823a4d5aa98a4f908eff8cae",
+              "difficulty": "0x30398df",
+              "epochNumber": "0x4351312",
               "gasLimit": "0x1c9c380",
               "gasUsed": "0x0",
-              "hash": "0xd4cd82f1d8cfdf76afc25cb6ba2d2fa85bf541f214510b4a0a52ca91e715ebba",
-              "height": "0x4221ac2",
+              "hash": "0xa7ae72a6d198e2f4bb53cc39216239bab7e7e54f77ff14a858ac2a367db20b27",
+              "height": "0x4351312",
               "miner": "CFXTEST:TYPE.USER:AANG4D91REJDBPGMGTMSPDYEFXKUBJ2BBYWRWM9J3Z",
-              "nonce": "0x630fc2657d4d0a0d",
-              "parentHash": "0xa92409a391b366e0cb1be32040c506e683605ded23471ec50ac6b12b05e21214",
-              "posReference": "0x10e44228f68b3f2441ae9576e0e60e463640fc8416357b84ebca6749cf3ac1bf",
-              "powQuality": "0x2a320250",
+              "nonce": "0x50fbbc4eed19a17f",
+              "parentHash": "0xc3e749973910ba91c25298c82bbefcd6a1f81058bcb4d5199fdb668c5bedb8b2",
+              "posReference": "0x15d1f8229af27823a143410127f88bcbd8fb686a35c9a216c545dff74b5b13f6",
+              "powQuality": "0x5071249",
               "refereeHashes": [
-                "0x6c7ba486382713757a2ffd26812bfeb03caf6b37833e75216343740d2c671d35"
+                "0xb2f6aae3385d277fb22a98748d1ebedd7d44759a2dc91a22a0a2af8f3cca5a58"
               ],
               "size": "0x0",
-              "timestamp": "0x62418690",
+              "timestamp": "0x624e609a",
               "transactions": [],
               "transactionsRoot": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
             }
@@ -2444,29 +2444,29 @@
             "value": {
               "adaptive": false,
               "blame": "0x0",
-              "blockNumber": "0x53ab738",
+              "blockNumber": "0x5546676",
               "custom": [
                 "0x01"
               ],
               "deferredLogsBloomHash": "0xd397b3b043d87fcd6fad1291ff0bfd16401c274896d8c63a923727f077b8e0b5",
               "deferredReceiptsRoot": "0x09f8709ea9f344a810811a373b30861568f5686e649d6177fd92ea2db7477508",
-              "deferredStateRoot": "0xfd1dfed86a016f725a855908e1ddc74931c5ccdb9912330266ca919e8269df88",
-              "difficulty": "0x2fd27e6",
-              "epochNumber": "0x4221ac2",
+              "deferredStateRoot": "0x9207d655134e154139fbbbc21a604df20006e9bc823a4d5aa98a4f908eff8cae",
+              "difficulty": "0x30398df",
+              "epochNumber": "0x4351312",
               "gasLimit": "0x1c9c380",
               "gasUsed": "0x0",
-              "hash": "0xd4cd82f1d8cfdf76afc25cb6ba2d2fa85bf541f214510b4a0a52ca91e715ebba",
-              "height": "0x4221ac2",
+              "hash": "0xa7ae72a6d198e2f4bb53cc39216239bab7e7e54f77ff14a858ac2a367db20b27",
+              "height": "0x4351312",
               "miner": "CFXTEST:TYPE.USER:AANG4D91REJDBPGMGTMSPDYEFXKUBJ2BBYWRWM9J3Z",
-              "nonce": "0x630fc2657d4d0a0d",
-              "parentHash": "0xa92409a391b366e0cb1be32040c506e683605ded23471ec50ac6b12b05e21214",
-              "posReference": "0x10e44228f68b3f2441ae9576e0e60e463640fc8416357b84ebca6749cf3ac1bf",
-              "powQuality": "0x2a320250",
+              "nonce": "0x50fbbc4eed19a17f",
+              "parentHash": "0xc3e749973910ba91c25298c82bbefcd6a1f81058bcb4d5199fdb668c5bedb8b2",
+              "posReference": "0x15d1f8229af27823a143410127f88bcbd8fb686a35c9a216c545dff74b5b13f6",
+              "powQuality": "0x5071249",
               "refereeHashes": [
-                "0x6c7ba486382713757a2ffd26812bfeb03caf6b37833e75216343740d2c671d35"
+                "0xb2f6aae3385d277fb22a98748d1ebedd7d44759a2dc91a22a0a2af8f3cca5a58"
               ],
               "size": "0x0",
-              "timestamp": "0x62418690",
+              "timestamp": "0x624e609a",
               "transactions": [],
               "transactionsRoot": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
             }
@@ -2490,27 +2490,27 @@
             "value": {
               "adaptive": false,
               "blame": "0x0",
-              "blockNumber": "0x53ab732",
+              "blockNumber": "0x554666f",
               "custom": [
                 "0x01"
               ],
-              "deferredLogsBloomHash": "0xd397b3b043d87fcd6fad1291ff0bfd16401c274896d8c63a923727f077b8e0b5",
-              "deferredReceiptsRoot": "0x09f8709ea9f344a810811a373b30861568f5686e649d6177fd92ea2db7477508",
-              "deferredStateRoot": "0x5b1e4516fd9bca9d00960037e07b171510f9df80f325fff9f8cfc6ab767b5162",
-              "difficulty": "0x2fd27e6",
-              "epochNumber": "0x4221abe",
+              "deferredLogsBloomHash": "0x95ec89519d95ac7c7fac2c4c98da676d58a3d7c6f715eb99a6b79b4ae9681115",
+              "deferredReceiptsRoot": "0x734591ae645d5f240907b139f841e67e6c3573883dab1886d225a67f114d56f0",
+              "deferredStateRoot": "0x771256e2b1d5904a3d48cf42ca47eeae40cca7dc2e0e56945ebc4da11c8b8807",
+              "difficulty": "0x30398df",
+              "epochNumber": "0x435130e",
               "gasLimit": "0x1c9c380",
               "gasUsed": "0x0",
-              "hash": "0x09e919da6e976070385444dd764fdbb461ec0844730b27eab0893acaf0b1509f",
-              "height": "0x4221abe",
-              "miner": "CFXTEST:TYPE.USER:AANG4D91REJDBPGMGTMSPDYEFXKUBJ2BBYWRWM9J3Z",
-              "nonce": "0x69e6b42320e94e60",
-              "parentHash": "0x40d48a62bc61194aa08bab24f233301c9a4c6aea41498afed25cfa9a16fa8f5f",
-              "posReference": "0x10e44228f68b3f2441ae9576e0e60e463640fc8416357b84ebca6749cf3ac1bf",
-              "powQuality": "0x354005b",
+              "hash": "0xf1dc13c43748bb6497efa7286415028ab6a109d153f74733c5a990ea6fc2f3d3",
+              "height": "0x435130e",
+              "miner": "CFXTEST:TYPE.USER:AASKVGXCFEJ371G4ECEPX9AN78NGRKE5AY9F8JTBGG",
+              "nonce": "0x264bc52150ce93c5",
+              "parentHash": "0x861c0df7709d2539a5d441994883e4328116f1a588c2bf49e6ce3357b4b02610",
+              "posReference": "0x15d1f8229af27823a143410127f88bcbd8fb686a35c9a216c545dff74b5b13f6",
+              "powQuality": "0xd850065",
               "refereeHashes": [],
               "size": "0x0",
-              "timestamp": "0x6241868d",
+              "timestamp": "0x624e6097",
               "transactions": [],
               "transactionsRoot": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
             }
@@ -2534,27 +2534,27 @@
             "value": {
               "adaptive": false,
               "blame": "0x0",
-              "blockNumber": "0x53ab732",
+              "blockNumber": "0x554666f",
               "custom": [
                 "0x01"
               ],
-              "deferredLogsBloomHash": "0xd397b3b043d87fcd6fad1291ff0bfd16401c274896d8c63a923727f077b8e0b5",
-              "deferredReceiptsRoot": "0x09f8709ea9f344a810811a373b30861568f5686e649d6177fd92ea2db7477508",
-              "deferredStateRoot": "0x5b1e4516fd9bca9d00960037e07b171510f9df80f325fff9f8cfc6ab767b5162",
-              "difficulty": "0x2fd27e6",
-              "epochNumber": "0x4221abe",
+              "deferredLogsBloomHash": "0x95ec89519d95ac7c7fac2c4c98da676d58a3d7c6f715eb99a6b79b4ae9681115",
+              "deferredReceiptsRoot": "0x734591ae645d5f240907b139f841e67e6c3573883dab1886d225a67f114d56f0",
+              "deferredStateRoot": "0x771256e2b1d5904a3d48cf42ca47eeae40cca7dc2e0e56945ebc4da11c8b8807",
+              "difficulty": "0x30398df",
+              "epochNumber": "0x435130e",
               "gasLimit": "0x1c9c380",
               "gasUsed": "0x0",
-              "hash": "0x09e919da6e976070385444dd764fdbb461ec0844730b27eab0893acaf0b1509f",
-              "height": "0x4221abe",
-              "miner": "CFXTEST:TYPE.USER:AANG4D91REJDBPGMGTMSPDYEFXKUBJ2BBYWRWM9J3Z",
-              "nonce": "0x69e6b42320e94e60",
-              "parentHash": "0x40d48a62bc61194aa08bab24f233301c9a4c6aea41498afed25cfa9a16fa8f5f",
-              "posReference": "0x10e44228f68b3f2441ae9576e0e60e463640fc8416357b84ebca6749cf3ac1bf",
-              "powQuality": "0x354005b",
+              "hash": "0xf1dc13c43748bb6497efa7286415028ab6a109d153f74733c5a990ea6fc2f3d3",
+              "height": "0x435130e",
+              "miner": "CFXTEST:TYPE.USER:AASKVGXCFEJ371G4ECEPX9AN78NGRKE5AY9F8JTBGG",
+              "nonce": "0x264bc52150ce93c5",
+              "parentHash": "0x861c0df7709d2539a5d441994883e4328116f1a588c2bf49e6ce3357b4b02610",
+              "posReference": "0x15d1f8229af27823a143410127f88bcbd8fb686a35c9a216c545dff74b5b13f6",
+              "powQuality": "0xd850065",
               "refereeHashes": [],
               "size": "0x0",
-              "timestamp": "0x6241868d",
+              "timestamp": "0x624e6097",
               "transactions": [],
               "transactionsRoot": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
             }
@@ -3108,7 +3108,7 @@
           "params": [],
           "result": {
             "name": "cfx_getBestBlockHash-Result",
-            "value": "0x48b0b44fba5441850449e20ef6cb6ec894bfc8b01314450c98ee9686126d7b2c"
+            "value": "0x375cf52772fff6760eefd0545b7fac32f49f86634984270c61046f8f582c4624"
           }
         }
       ]
@@ -3192,7 +3192,7 @@
             "name": "cfx_getNextNonce-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343940) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587163, optimistic_executed_height: Some(70587163) }"
             }
           }
         },
@@ -3267,7 +3267,7 @@
             "name": "cfx_getNextNonce-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343940) }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587167, optimistic_executed_height: None }"
             }
           }
         },
@@ -3310,7 +3310,7 @@
             "name": "cfx_getNextNonce-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343940) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587167, optimistic_executed_height: None }"
             }
           }
         }
@@ -3398,7 +3398,7 @@
             "name": "cfx_getLogs-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: Filter error: The gap between from_epoch and to_epoch is larger than max_gap (from: 69240000, to: 69343934, max_gap: 1000)"
+              "message": "Error processing request: Filter error: The gap between from_epoch and to_epoch is larger than max_gap (from: 70500000, to: 70587153, max_gap: 1000)"
             }
           }
         },
@@ -3508,7 +3508,80 @@
                   "CFXTEST:TYPE.CONTRACT:ACH6VR1546UJ7G81CUX357N0Z4T6MY3SNEMUZ04S6K"
                 ],
                 "topics": [
+                  [
+                    "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+                  ]
+                ]
+              }
+            }
+          ],
+          "result": {
+            "name": "cfx_getLogs-Result",
+            "value": [
+              {
+                "address": "CFXTEST:TYPE.CONTRACT:ACH6VR1546UJ7G81CUX357N0Z4T6MY3SNEMUZ04S6K",
+                "blockHash": "0xabe3eb80003af0750e263140eae174d434df5b1ab0dfbebe5263d461585f590e",
+                "data": "0x0000000000000000000000000000000000000000000000000000000000000064",
+                "epochNumber": "0x41987a9",
+                "logIndex": "0x0",
+                "topics": [
+                  "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+                  "0x0000000000000000000000001e6309dc46a2a4936abda54b69c91d7a3c75a39e",
+                  "0x0000000000000000000000001e6309dc46a2a4936abda54b69c91d7a3c75a39e"
+                ],
+                "transactionHash": "0xad1b8a95f43d903a400900e0af752bcf4b684136a125f2dcd4ac5be27e54d5f9",
+                "transactionIndex": "0x0",
+                "transactionLogIndex": "0x0"
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfx_getLogs",
+          "description": "",
+          "params": [
+            {
+              "name": "filter",
+              "value": {
+                "fromEpoch": "0x41987a1",
+                "toEpoch": "0x4198b88",
+                "address": [
+                  "CFXTEST:TYPE.CONTRACT:ACH6VR1546UJ7G81CUX357N0Z4T6MY3SNEMUZ04S6K"
+                ],
+                "topics": [
                   "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+                ],
+                "blockHashes": [
+                  "0x331dd5547ab3f30b2864535bdaf560e1db3e3cfb7bcd960f8bf10558cb9a45de",
+                  "0xabe3eb80003af0750e263140eae174d434df5b1ab0dfbebe5263d461585f590e"
+                ]
+              }
+            }
+          ],
+          "result": {
+            "name": "cfx_getLogs-Result",
+            "value": {
+              "code": -32602,
+              "message": "Filter must provide one of the following: (1) an epoch range through `fromEpoch` and `toEpoch`, (2) a block number range through `fromBlock` and `toBlock`, (3) a set of block hashes through `blockHashes`"
+            }
+          }
+        },
+        {
+          "name": "cfx_getLogs",
+          "description": "",
+          "params": [
+            {
+              "name": "filter",
+              "value": {
+                "fromEpoch": "0x41987a1",
+                "toEpoch": "0x4198b88",
+                "address": [
+                  "CFXTEST:TYPE.CONTRACT:ACH6VR1546UJ7G81CUX357N0Z4T6MY3SNEMUZ04S6K"
+                ],
+                "topics": [
+                  [
+                    "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+                  ]
                 ],
                 "blockHashes": [
                   "0x331dd5547ab3f30b2864535bdaf560e1db3e3cfb7bcd960f8bf10558cb9a45de",
@@ -3537,6 +3610,49 @@
                 ],
                 "topics": [
                   "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+                ],
+                "blockHashes": [
+                  "0x331dd5547ab3f30b2864535bdaf560e1db3e3cfb7bcd960f8bf10558cb9a45de",
+                  "0xabe3eb80003af0750e263140eae174d434df5b1ab0dfbebe5263d461585f590e"
+                ]
+              }
+            }
+          ],
+          "result": {
+            "name": "cfx_getLogs-Result",
+            "value": [
+              {
+                "address": "CFXTEST:TYPE.CONTRACT:ACH6VR1546UJ7G81CUX357N0Z4T6MY3SNEMUZ04S6K",
+                "blockHash": "0xabe3eb80003af0750e263140eae174d434df5b1ab0dfbebe5263d461585f590e",
+                "data": "0x0000000000000000000000000000000000000000000000000000000000000064",
+                "epochNumber": "0x41987a9",
+                "logIndex": "0x0",
+                "topics": [
+                  "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+                  "0x0000000000000000000000001e6309dc46a2a4936abda54b69c91d7a3c75a39e",
+                  "0x0000000000000000000000001e6309dc46a2a4936abda54b69c91d7a3c75a39e"
+                ],
+                "transactionHash": "0xad1b8a95f43d903a400900e0af752bcf4b684136a125f2dcd4ac5be27e54d5f9",
+                "transactionIndex": "0x0",
+                "transactionLogIndex": "0x0"
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfx_getLogs",
+          "description": "",
+          "params": [
+            {
+              "name": "filter",
+              "value": {
+                "address": [
+                  "CFXTEST:TYPE.CONTRACT:ACH6VR1546UJ7G81CUX357N0Z4T6MY3SNEMUZ04S6K"
+                ],
+                "topics": [
+                  [
+                    "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+                  ]
                 ],
                 "blockHashes": [
                   "0x331dd5547ab3f30b2864535bdaf560e1db3e3cfb7bcd960f8bf10558cb9a45de",
@@ -3907,13 +4023,13 @@
           "params": [
             {
               "name": "epoch_number",
-              "value": "0x42219eb"
+              "value": "0x4350b21"
             }
           ],
           "result": {
             "name": "cfx_getBlocksByEpoch-Result",
             "value": [
-              "0xc05a008afcc29209816f415b53a568cfa1b89cfdff312f894c949dfcba5dd69f"
+              "0x65edf7f1e1ffec4fd0eca4a2a6efb127b11d887dc7ca522ff75e418fda32d160"
             ]
           }
         },
@@ -3929,7 +4045,7 @@
           "result": {
             "name": "cfx_getBlocksByEpoch-Result",
             "value": [
-              "0xbdb6241a192de92710168bc5f457d75eff70d671bd17a4e77bba9f925f7fc460"
+              "0xebecb710c98a2b3dbe557f8a36c2bf7130cc95d086be6b0627a84fd07e914e86"
             ]
           }
         },
@@ -3961,7 +4077,7 @@
           "result": {
             "name": "cfx_getBlocksByEpoch-Result",
             "value": [
-              "0xa0673745396465195941f8fdb9c99f2dd53f008e11d21fdb144b941e8c77f318"
+              "0x3f5ba01f7ac1c30ddc40f97b5a89786491472ddac4261a06338c48b746c3dfdb"
             ]
           }
         },
@@ -3977,8 +4093,7 @@
           "result": {
             "name": "cfx_getBlocksByEpoch-Result",
             "value": [
-              "0x8f74e8ac659be80ccd38c3ef6cb23154b7593941db46eb25f93736d65da7a517",
-              "0x2e99e614d2afcc631216ab811d921f595bd656de37de697eb6808bc2e5352020"
+              "0xdbfe35783e046eab1bdb519506dd4d11f2a4f6bdd67d6c4d83fe14ccdfdbceb2"
             ]
           }
         },
@@ -3994,7 +4109,7 @@
           "result": {
             "name": "cfx_getBlocksByEpoch-Result",
             "value": [
-              "0x7f0dac5884e29f7aaeb74b2aa0e2dbcf3a2ded956fe258dd44baf56cd3777957"
+              "0x163f896ad555627c591692241570bd5d99290c8a826f409433687e843bd2e021"
             ]
           }
         },
@@ -4010,7 +4125,8 @@
           "result": {
             "name": "cfx_getBlocksByEpoch-Result",
             "value": [
-              "0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4"
+              "0xec07ad889b4aba91b578a7536aa9c3ddb60fe9cbdfd5e9204fc108b255f08bb7",
+              "0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0"
             ]
           }
         }
@@ -4044,7 +4160,7 @@
           "params": [
             {
               "name": "epoch_number",
-              "value": "0x42219eb"
+              "value": "0x4350b21"
             }
           ],
           "result": {
@@ -4381,7 +4497,7 @@
             "name": "cfx_getAccount-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343941) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587167, optimistic_executed_height: None }"
             }
           }
         },
@@ -4483,7 +4599,7 @@
             "name": "cfx_getAccount-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343941) }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587167, optimistic_executed_height: None }"
             }
           }
         },
@@ -4526,7 +4642,7 @@
             "name": "cfx_getAccount-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343941, optimistic_executed_height: Some(69343941) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587167, optimistic_executed_height: None }"
             }
           }
         }
@@ -4557,7 +4673,7 @@
           "params": [
             {
               "name": "epoch_number",
-              "value": "0x42219eb"
+              "value": "0x4350b21"
             }
           ],
           "result": {
@@ -4596,7 +4712,7 @@
             "name": "cfx_getInterestRate-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343945, optimistic_executed_height: Some(69343944) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587171, optimistic_executed_height: Some(70587170) }"
             }
           }
         },
@@ -4655,7 +4771,7 @@
             "name": "cfx_getInterestRate-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343945, optimistic_executed_height: Some(69343944) }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587171, optimistic_executed_height: Some(70587171) }"
             }
           }
         }
@@ -4686,7 +4802,7 @@
           "params": [
             {
               "name": "epoch_number",
-              "value": "0x42219eb"
+              "value": "0x4350b21"
             }
           ],
           "result": {
@@ -4725,7 +4841,7 @@
             "name": "cfx_getAccumulateInterestRate-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343945, optimistic_executed_height: Some(69343945) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587171, optimistic_executed_height: Some(70587171) }"
             }
           }
         },
@@ -4784,7 +4900,7 @@
             "name": "cfx_getAccumulateInterestRate-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=69240000 hash=0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 69338001, upper_bound: 69343945, optimistic_executed_height: Some(69343945) }"
+              "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587175, optimistic_executed_height: None }"
             }
           }
         }
@@ -4816,9 +4932,9 @@
           "result": {
             "name": "cfx_getPoSEconomics-Result",
             "value": {
-              "distributablePosInterest": "0x313b8df645ff4512c67f50",
-              "lastDistributeBlock": "0x53aa5c4",
-              "totalPosStakingTokens": "0x8ecfe51d3521fa9e31a00000"
+              "distributablePosInterest": "0x13a4fb2ba032dbe9187ecb",
+              "lastDistributeBlock": "0x5545f21",
+              "totalPosStakingTokens": "0x8031e2df8079ce5a61c00000"
             }
           }
         }
@@ -4863,17 +4979,17 @@
           "result": {
             "name": "cfx_getStatus-Result",
             "value": {
-              "bestHash": "0x48b0b44fba5441850449e20ef6cb6ec894bfc8b01314450c98ee9686126d7b2c",
-              "blockNumber": "0x53ab73c",
+              "bestHash": "0xe2410e6ee0129c23d5184a88c76fa47fbc785fa55638d02de084fe992347e2e3",
+              "blockNumber": "0x554667e",
               "chainId": "0x1",
-              "epochNumber": "0x4221ac4",
+              "epochNumber": "0x4351317",
               "ethereumSpaceChainId": "0x47",
-              "latestCheckpoint": "0x42084c0",
-              "latestConfirmed": "0x4221a87",
-              "latestFinalized": "0x422190c",
-              "latestState": "0x4221ac0",
+              "latestCheckpoint": "0x433bea0",
+              "latestConfirmed": "0x43512db",
+              "latestFinalized": "0x43510d4",
+              "latestState": "0x4351313",
               "networkId": "0x1",
-              "pendingTxNumber": "0x2b"
+              "pendingTxNumber": "0xad4"
             }
           }
         }
@@ -4907,17 +5023,17 @@
           "params": [
             {
               "name": "num",
-              "value": "0x42219eb"
+              "value": "0x4350b21"
             }
           ],
           "result": {
             "name": "cfx_getBlockRewardInfo-Result",
             "value": [
               {
-                "author": "CFXTEST:TYPE.USER:AAS8ESGXR0Y27MYBYBDWFE798ZSZBKH79U2GFBUSWX",
-                "baseReward": "0x1bbe95cecaf60000",
-                "blockHash": "0xc05a008afcc29209816f415b53a568cfa1b89cfdff312f894c949dfcba5dd69f",
-                "totalReward": "0x1bc05cfd441092ab",
+                "author": "CFXTEST:TYPE.USER:AAMJXDGZ4M84HJVF2S9RMW5UZD4DKH8AA6KRDSH0EP",
+                "baseReward": "0x1bc0b7812dd38000",
+                "blockHash": "0x65edf7f1e1ffec4fd0eca4a2a6efb127b11d887dc7ca522ff75e418fda32d160",
+                "totalReward": "0x1bc297bf33e95087",
                 "txFee": "0x0"
               }
             ]
@@ -4987,16 +5103,9 @@
             "value": [
               {
                 "author": "CFXTEST:TYPE.USER:AANG4D91REJDBPGMGTMSPDYEFXKUBJ2BBYWRWM9J3Z",
-                "baseReward": "0x1bb60f053f800000",
-                "blockHash": "0x8f74e8ac659be80ccd38c3ef6cb23154b7593941db46eb25f93736d65da7a517",
-                "totalReward": "0x1bb7d5dc407cd832",
-                "txFee": "0x0"
-              },
-              {
-                "author": "CFXTEST:TYPE.USER:AASKVGXCFEJ371G4ECEPX9AN78NGRKE5AY9F8JTBGG",
                 "baseReward": "0x1bc0b7812dd38000",
-                "blockHash": "0x2e99e614d2afcc631216ab811d921f595bd656de37de697eb6808bc2e5352020",
-                "totalReward": "0x1bc27f071f0bcd23",
+                "blockHash": "0x1c79eb4f7189fe55370ff24f8dae0b175a4919581615a0142dfecb65e5320b3a",
+                "totalReward": "0x1bc297c037cb1b15",
                 "txFee": "0x0"
               }
             ]
@@ -5015,11 +5124,11 @@
             "name": "cfx_getBlockRewardInfo-Result",
             "value": [
               {
-                "author": "CFXTEST:TYPE.USER:AAMJXDGZ4M84HJVF2S9RMW5UZD4DKH8AA6KRDSH0EP",
+                "author": "CFXTEST:TYPE.USER:AASKVGXCFEJ371G4ECEPX9AN78NGRKE5AY9F8JTBGG",
                 "baseReward": "0x1bc16d674ec80000",
-                "blockHash": "0x7f0dac5884e29f7aaeb74b2aa0e2dbcf3a2ded956fe258dd44baf56cd3777957",
-                "totalReward": "0x1bc33495bc127dd3",
-                "txFee": "0x0"
+                "blockHash": "0x163f896ad555627c591692241570bd5d99290c8a826f409433687e843bd2e021",
+                "totalReward": "0x1bc34da62be3b9cd",
+                "txFee": "0x7a120"
               }
             ]
           }
@@ -5038,10 +5147,17 @@
             "value": [
               {
                 "author": "CFXTEST:TYPE.USER:AASKVGXCFEJ371G4ECEPX9AN78NGRKE5AY9F8JTBGG",
-                "baseReward": "0x1bc16d674ec80000",
-                "blockHash": "0x50247699493593b0146c7ed54c3e57bad4ec66d72594e403f0933e82badbd4d4",
-                "totalReward": "0x1bc334717bec20e3",
+                "baseReward": "0x1bbb0850262f8000",
+                "blockHash": "0xec07ad889b4aba91b578a7536aa9c3ddb60fe9cbdfd5e9204fc108b255f08bb7",
+                "totalReward": "0x1bbce83f08aa3d51",
                 "txFee": "0x0"
+              },
+              {
+                "author": "CFXTEST:TYPE.USER:AAMJXDGZ4M84HJVF2S9RMW5UZD4DKH8AA6KRDSH0EP",
+                "baseReward": "0x1bc16d674ec80000",
+                "blockHash": "0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0",
+                "totalReward": "0x1bc34dc4de662074",
+                "txFee": "0x7a120"
               }
             ]
           }
@@ -5096,11 +5212,11 @@
           "result": {
             "name": "cfx_getSupplyInfo-Result",
             "value": {
-              "totalCirculating": "0x1ed0b68880ee5d0ae219679f2b53a",
-              "totalCollateral": "0xa71c0e699689440b0000",
-              "totalEspaceTokens": "0xa2f6b97ad57bd51f2d799",
-              "totalIssued": "0x1ed0b78aff61239dcf3b0506ab53a",
-              "totalStaking": "0x8f54703699621990ba465057"
+              "totalCirculating": "0x1ed0badc4bd1db1b932a50af7bba2",
+              "totalCollateral": "0xb04fc0d074a8f130c000",
+              "totalEspaceTokens": "0x415cea29ab40c79e68e159",
+              "totalIssued": "0x1ed0bbdeca44a1ae804bee16fbba2",
+              "totalStaking": "0x8f54d24caad168157c61ac47"
             }
           }
         }
@@ -5132,7 +5248,7 @@
           "params": [
             {
               "name": "epoch",
-              "value": "0x42219eb"
+              "value": "0x4350b21"
             }
           ],
           "result": {
