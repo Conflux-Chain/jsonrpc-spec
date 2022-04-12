@@ -202,7 +202,7 @@
           "params": [],
           "result": {
             "name": "eth_blockNumber-Result",
-            "value": "0x43f0122"
+            "value": "0x43f0f1e"
           }
         }
       ]
@@ -264,7 +264,7 @@
             "name": "eth_getBalance-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71232001, upper_bound: 71237924, optimistic_executed_height: Some(71237924) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71236001, upper_bound: 71241503, optimistic_executed_height: Some(71241503) }"
             }
           }
         },
@@ -400,7 +400,7 @@
             "name": "eth_getStorageAt-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71232001, upper_bound: 71237924, optimistic_executed_height: Some(71237923) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71236001, upper_bound: 71241503, optimistic_executed_height: Some(71241503) }"
             }
           }
         },
@@ -473,7 +473,7 @@
             "name": "eth_getStorageAt-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=1000000 hash=0x0fab248a77b93e4a464d07847f4c971ff98941d53ddd70eaa8a9614bdfcc498a) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71232001, upper_bound: 71237924, optimistic_executed_height: Some(71237923) }"
+              "message": "Error processing request: State for epoch (number=1000000 hash=0x0fab248a77b93e4a464d07847f4c971ff98941d53ddd70eaa8a9614bdfcc498a) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71236001, upper_bound: 71241503, optimistic_executed_height: Some(71241503) }"
             }
           }
         }
@@ -738,23 +738,23 @@
           "result": {
             "name": "eth_getBlockByNumber-Result",
             "value": {
-              "author": "0x1de238d36da98eaa81a0472293bff55d50a4fdfc",
-              "difficulty": "0x2f1a025",
+              "author": "0x14898cd5d2bda3a225c3bed54b70a8f4349fc007",
+              "difficulty": "0x2f3f4c4",
               "extraData": "0x",
               "gasLimit": "0x1c9c380",
               "gasUsed": "0x0",
-              "hash": "0x5e50855bb62b17b27b3c1426c9bf3640e586e189309a0269734c87b211badd59",
+              "hash": "0x3d7f1a26a016221e07129e2def039fd0a16b98e438d96b2d25e437767cf8459a",
               "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-              "miner": "0x1de238d36da98eaa81a0472293bff55d50a4fdfc",
+              "miner": "0x14898cd5d2bda3a225c3bed54b70a8f4349fc007",
               "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-              "nonce": "0x00000000001a23a5",
-              "number": "0x43f011f",
-              "parentHash": "0xd1ed9f7297a167d2d2c58afe68c556812efbeb10e811a50913a801c58ab08fda",
+              "nonce": "0x5f60ac9769b7ca74",
+              "number": "0x43f0f1b",
+              "parentHash": "0xa4e93b150800404a7aa95a764e38c9b105a5fa60acef7516b87695317598faa8",
               "receiptsRoot": "0x09f8709ea9f344a810811a373b30861568f5686e649d6177fd92ea2db7477508",
               "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
               "size": "0x0",
-              "stateRoot": "0x6ad4fd74cb713f7117ab98f41a0110ebafd3b581f675c2925758d4155ed94cac",
-              "timestamp": "0x62551e1b",
+              "stateRoot": "0x674c0d6f6ebc17c915f05961a29a429eed6811dd3385806f8bcb69baf2379323",
+              "timestamp": "0x625527b3",
               "totalDifficulty": "0x0",
               "transactions": [],
               "transactionsRoot": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
@@ -778,23 +778,23 @@
           "result": {
             "name": "eth_getBlockByNumber-Result",
             "value": {
-              "author": "0x1de238d36da98eaa81a0472293bff55d50a4fdfc",
-              "difficulty": "0x2f1a025",
+              "author": "0x14898cd5d2bda3a225c3bed54b70a8f4349fc007",
+              "difficulty": "0x2f3f4c4",
               "extraData": "0x",
               "gasLimit": "0x1c9c380",
               "gasUsed": "0x0",
-              "hash": "0x5e50855bb62b17b27b3c1426c9bf3640e586e189309a0269734c87b211badd59",
+              "hash": "0x3d7f1a26a016221e07129e2def039fd0a16b98e438d96b2d25e437767cf8459a",
               "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-              "miner": "0x1de238d36da98eaa81a0472293bff55d50a4fdfc",
+              "miner": "0x14898cd5d2bda3a225c3bed54b70a8f4349fc007",
               "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-              "nonce": "0x00000000001a23a5",
-              "number": "0x43f011f",
-              "parentHash": "0xd1ed9f7297a167d2d2c58afe68c556812efbeb10e811a50913a801c58ab08fda",
+              "nonce": "0x5f60ac9769b7ca74",
+              "number": "0x43f0f1b",
+              "parentHash": "0xa4e93b150800404a7aa95a764e38c9b105a5fa60acef7516b87695317598faa8",
               "receiptsRoot": "0x09f8709ea9f344a810811a373b30861568f5686e649d6177fd92ea2db7477508",
               "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
               "size": "0x0",
-              "stateRoot": "0x6ad4fd74cb713f7117ab98f41a0110ebafd3b581f675c2925758d4155ed94cac",
-              "timestamp": "0x62551e1b",
+              "stateRoot": "0x674c0d6f6ebc17c915f05961a29a429eed6811dd3385806f8bcb69baf2379323",
+              "timestamp": "0x625527b3",
               "totalDifficulty": "0x0",
               "transactions": [],
               "transactionsRoot": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
@@ -1012,7 +1012,7 @@
             "name": "eth_getTransactionCount-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71232001, upper_bound: 71237924, optimistic_executed_height: Some(71237924) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71236001, upper_bound: 71241503, optimistic_executed_height: Some(71241503) }"
             }
           }
         },
@@ -1212,7 +1212,7 @@
             "name": "eth_getCode-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71232001, upper_bound: 71237924, optimistic_executed_height: Some(71237923) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71236001, upper_bound: 71241503, optimistic_executed_height: Some(71241503) }"
             }
           }
         },
@@ -1893,7 +1893,7 @@
             "name": "eth_getLogs-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: Filter error: The gap between from_epoch and to_epoch is larger than max_gap (from: 71140000, to: 71237921, max_gap: 1000)"
+              "message": "Error processing request: Filter error: The gap between from_epoch and to_epoch is larger than max_gap (from: 71160000, to: 71241501, max_gap: 1000)"
             }
           }
         },
@@ -2140,6 +2140,25 @@
               "name": "filter",
               "value": {
                 "address": "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8",
+                "blockHash": "0x199ab67c87a39c45acb2ed878ae1b6d3bae22fba16f51dced036babf9b6daf62"
+              }
+            }
+          ],
+          "result": {
+            "name": "eth_getLogs-Result",
+            "value": []
+          }
+        },
+        {
+          "name": "eth_getLogs",
+          "description": "",
+          "params": [
+            {
+              "name": "filter",
+              "value": {
+                "address": [
+                  "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8"
+                ],
                 "blockHash": "0x199ab67c87a39c45acb2ed878ae1b6d3bae22fba16f51dced036babf9b6daf62"
               }
             }
