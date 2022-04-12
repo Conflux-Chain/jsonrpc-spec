@@ -202,7 +202,7 @@
           "params": [],
           "result": {
             "name": "eth_blockNumber-Result",
-            "value": "0x43f0f1e"
+            "value": "0x43f3b6a"
           }
         }
       ]
@@ -264,7 +264,7 @@
             "name": "eth_getBalance-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71236001, upper_bound: 71241503, optimistic_executed_height: Some(71241503) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71248001, upper_bound: 71252846, optimistic_executed_height: None }"
             }
           }
         },
@@ -367,7 +367,7 @@
           "params": [
             {
               "name": "address",
-              "value": "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8"
+              "value": "0x7253cb7bb788f91b18e20b61e708cb0c98383fc8"
             },
             {
               "name": "position",
@@ -385,7 +385,7 @@
           "params": [
             {
               "name": "address",
-              "value": "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8"
+              "value": "0x7253cb7bb788f91b18e20b61e708cb0c98383fc8"
             },
             {
               "name": "position",
@@ -400,7 +400,7 @@
             "name": "eth_getStorageAt-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71236001, upper_bound: 71241503, optimistic_executed_height: Some(71241503) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71248001, upper_bound: 71252842, optimistic_executed_height: Some(71252842) }"
             }
           }
         },
@@ -410,7 +410,7 @@
           "params": [
             {
               "name": "address",
-              "value": "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8"
+              "value": "0x7253cb7bb788f91b18e20b61e708cb0c98383fc8"
             },
             {
               "name": "position",
@@ -432,7 +432,7 @@
           "params": [
             {
               "name": "address",
-              "value": "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8"
+              "value": "0x7253cb7bb788f91b18e20b61e708cb0c98383fc8"
             },
             {
               "name": "position",
@@ -458,7 +458,7 @@
           "params": [
             {
               "name": "address",
-              "value": "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8"
+              "value": "0x7253cb7bb788f91b18e20b61e708cb0c98383fc8"
             },
             {
               "name": "position",
@@ -473,7 +473,7 @@
             "name": "eth_getStorageAt-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=1000000 hash=0x0fab248a77b93e4a464d07847f4c971ff98941d53ddd70eaa8a9614bdfcc498a) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71236001, upper_bound: 71241503, optimistic_executed_height: Some(71241503) }"
+              "message": "Error processing request: State for epoch (number=1000000 hash=0x0fab248a77b93e4a464d07847f4c971ff98941d53ddd70eaa8a9614bdfcc498a) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71248001, upper_bound: 71252842, optimistic_executed_height: Some(71252842) }"
             }
           }
         }
@@ -738,23 +738,23 @@
           "result": {
             "name": "eth_getBlockByNumber-Result",
             "value": {
-              "author": "0x14898cd5d2bda3a225c3bed54b70a8f4349fc007",
-              "difficulty": "0x2f3f4c4",
+              "author": "0x166d0ff7691030b0ca33d4e60e842cd300a3010d",
+              "difficulty": "0x30058e5",
               "extraData": "0x",
               "gasLimit": "0x1c9c380",
               "gasUsed": "0x0",
-              "hash": "0x3d7f1a26a016221e07129e2def039fd0a16b98e438d96b2d25e437767cf8459a",
+              "hash": "0xd9c29e2a0574ffed11505d429b75eb8b05e23fca633a3f6ab6de525328106011",
               "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-              "miner": "0x14898cd5d2bda3a225c3bed54b70a8f4349fc007",
+              "miner": "0x166d0ff7691030b0ca33d4e60e842cd300a3010d",
               "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-              "nonce": "0x5f60ac9769b7ca74",
-              "number": "0x43f0f1b",
-              "parentHash": "0xa4e93b150800404a7aa95a764e38c9b105a5fa60acef7516b87695317598faa8",
+              "nonce": "0x75058810f98d0e6e",
+              "number": "0x43f3b63",
+              "parentHash": "0xa4800e7b733895d426e975e37ea97965ab242a7e114011dfd35f8be499249330",
               "receiptsRoot": "0x09f8709ea9f344a810811a373b30861568f5686e649d6177fd92ea2db7477508",
               "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
               "size": "0x0",
-              "stateRoot": "0x674c0d6f6ebc17c915f05961a29a429eed6811dd3385806f8bcb69baf2379323",
-              "timestamp": "0x625527b3",
+              "stateRoot": "0x1fc00508a2b18740af339125ec6198833703578d6de66b791340cbff425de77a",
+              "timestamp": "0x62554583",
               "totalDifficulty": "0x0",
               "transactions": [],
               "transactionsRoot": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
@@ -778,23 +778,23 @@
           "result": {
             "name": "eth_getBlockByNumber-Result",
             "value": {
-              "author": "0x14898cd5d2bda3a225c3bed54b70a8f4349fc007",
-              "difficulty": "0x2f3f4c4",
+              "author": "0x166d0ff7691030b0ca33d4e60e842cd300a3010d",
+              "difficulty": "0x30058e5",
               "extraData": "0x",
               "gasLimit": "0x1c9c380",
               "gasUsed": "0x0",
-              "hash": "0x3d7f1a26a016221e07129e2def039fd0a16b98e438d96b2d25e437767cf8459a",
+              "hash": "0xa6230f3caf8492e55edc211f4f2087c0d691e63c4dfb1a48bf3be3fe523eb0fd",
               "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-              "miner": "0x14898cd5d2bda3a225c3bed54b70a8f4349fc007",
+              "miner": "0x166d0ff7691030b0ca33d4e60e842cd300a3010d",
               "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-              "nonce": "0x5f60ac9769b7ca74",
-              "number": "0x43f0f1b",
-              "parentHash": "0xa4e93b150800404a7aa95a764e38c9b105a5fa60acef7516b87695317598faa8",
-              "receiptsRoot": "0x09f8709ea9f344a810811a373b30861568f5686e649d6177fd92ea2db7477508",
+              "nonce": "0x22c5ac9bafeeff87",
+              "number": "0x43f3b64",
+              "parentHash": "0xd9c29e2a0574ffed11505d429b75eb8b05e23fca633a3f6ab6de525328106011",
+              "receiptsRoot": "0xd5f7e7960e9b56753868260c280746c01353dcd1b91a20cee2c919d0dc7bf78b",
               "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
               "size": "0x0",
-              "stateRoot": "0x674c0d6f6ebc17c915f05961a29a429eed6811dd3385806f8bcb69baf2379323",
-              "timestamp": "0x625527b3",
+              "stateRoot": "0x0857e20dbac7ae7fdb5b67ec35181ea5c8237ae36c9bf4a487f12bd24b9b7dbb",
+              "timestamp": "0x62554584",
               "totalDifficulty": "0x0",
               "transactions": [],
               "transactionsRoot": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
@@ -1012,7 +1012,7 @@
             "name": "eth_getTransactionCount-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71236001, upper_bound: 71241503, optimistic_executed_height: Some(71241503) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71248001, upper_bound: 71252846, optimistic_executed_height: None }"
             }
           }
         },
@@ -1187,7 +1187,7 @@
           "params": [
             {
               "name": "address",
-              "value": "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8"
+              "value": "0x7253cb7bb788f91b18e20b61e708cb0c98383fc8"
             }
           ],
           "result": {
@@ -1201,7 +1201,7 @@
           "params": [
             {
               "name": "address",
-              "value": "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8"
+              "value": "0x7253cb7bb788f91b18e20b61e708cb0c98383fc8"
             },
             {
               "name": "blockNumber",
@@ -1212,7 +1212,7 @@
             "name": "eth_getCode-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71236001, upper_bound: 71241503, optimistic_executed_height: Some(71241503) }"
+              "message": "Error processing request: State for epoch (number=0 hash=0x3fb9d350f95424c3c27fcf248d9a6f633a83c2a75c11ef887ea41540c85e7804) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 71248001, upper_bound: 71252842, optimistic_executed_height: Some(71252841) }"
             }
           }
         },
@@ -1222,7 +1222,7 @@
           "params": [
             {
               "name": "address",
-              "value": "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8"
+              "value": "0x7253cb7bb788f91b18e20b61e708cb0c98383fc8"
             },
             {
               "name": "blockNumber",
@@ -1240,7 +1240,7 @@
           "params": [
             {
               "name": "address",
-              "value": "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8"
+              "value": "0x7253cb7bb788f91b18e20b61e708cb0c98383fc8"
             },
             {
               "name": "blockNumber",
@@ -1893,7 +1893,7 @@
             "name": "eth_getLogs-Result",
             "value": {
               "code": -32016,
-              "message": "Error processing request: Filter error: The gap between from_epoch and to_epoch is larger than max_gap (from: 71160000, to: 71241501, max_gap: 1000)"
+              "message": "Error processing request: Filter error: The gap between from_epoch and to_epoch is larger than max_gap (from: 71160000, to: 71252840, max_gap: 1000)"
             }
           }
         },
@@ -2139,7 +2139,7 @@
             {
               "name": "filter",
               "value": {
-                "address": "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8",
+                "address": "0x7253cb7bb788f91b18e20b61e708cb0c98383fc8",
                 "blockHash": "0x199ab67c87a39c45acb2ed878ae1b6d3bae22fba16f51dced036babf9b6daf62"
               }
             }
@@ -2157,7 +2157,7 @@
               "name": "filter",
               "value": {
                 "address": [
-                  "0x7253cb7BB788f91b18e20B61e708cb0C98383Fc8"
+                  "0x7253cb7bb788f91b18e20b61e708cb0c98383fc8"
                 ],
                 "blockHash": "0x199ab67c87a39c45acb2ed878ae1b6d3bae22fba16f51dced036babf9b6daf62"
               }
