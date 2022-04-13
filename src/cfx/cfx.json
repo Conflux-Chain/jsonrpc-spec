@@ -13,12 +13,22 @@
     {
       "name": "conflux core space mainnet RPC",
       "url": "https://main.confluxrpc.com",
-      "summary": "The mainnet RPC server for Conflux eSpace. chainId: 1029"
+      "summary": "The mainnet RPC server for Conflux core space. chainId: 1029"
+    },
+    {
+      "name": "conflux core space mainnet websocket RPC",
+      "url": "wss://main.confluxrpc.com/ws",
+      "summary": "The mainnet RPC server with websocket protocal for Conflux core space. chainId: 1029"
     },
     {
       "name": "conflux core space testnet RPC",
       "url": "https://test.confluxrpc.com",
-      "summary": "The testnet RPC server for Conflux eSpace. chainId: 1"
+      "summary": "The testnet RPC server for Conflux core space. chainId: 1"
+    },
+    {
+      "name": "conflux core space testnet websocket RPC",
+      "url": "wss://test.confluxrpc.com/ws",
+      "summary": "The testnet RPC server with websocket protocal for Conflux core space. chainId: 1"
     }
   ],
   "methods": [
