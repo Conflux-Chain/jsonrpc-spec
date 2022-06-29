@@ -91,15 +91,15 @@
         {
             "params": [
                 {
-                    "fromBlock": "47588605"
+                    "fromBlock": "0x2d624fd"
                 }
             ]
         },
         {
             "params": [
                 {
-                    "fromBlock": "47588600",
-                    "toBlock": "47588610"
+                    "fromBlock": "0x2d624f0",
+                    "toBlock": "0x2d624ff"
                 }
             ]
         },
