@@ -751,8 +751,7 @@
         "params": [
           {
             "fromEpoch": "0x0",
-            "toEpoch": "0x99",
-            "limit": "0x100"
+            "toEpoch": "0x99"
           }
         ],
         "result": []

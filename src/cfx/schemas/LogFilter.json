@@ -31,16 +31,6 @@
         "title": "fromEpoch",
         "$ref": "#/components/schemas/EpochNumber"
       },
-      "limit": {
-        "nullable": true,
-        "title": "limit",
-        "$ref": "#/components/schemas/U64"
-      },
-      "offset": {
-        "nullable": true,
-        "title": "offset",
-        "$ref": "#/components/schemas/U64"
-      },
       "toBlock": {
         "nullable": true,
         "title": "toBlock",
