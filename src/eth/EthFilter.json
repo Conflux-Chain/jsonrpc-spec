@@ -194,11 +194,6 @@
       "title": "fromBlock",
       "$ref": "#/components/schemas/BlockNumber"
      },
-     "limit": {
-      "nullable": true,
-      "title": "limit",
-      "$ref": "#/components/schemas/usize"
-     },
      "toBlock": {
       "nullable": true,
       "title": "toBlock",
