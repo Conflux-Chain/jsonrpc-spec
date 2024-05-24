@@ -12,5 +12,11 @@ The Conflux JSON-RPC is a collection of methods. This interface allows downstrea
 Prepare a JSON-RPC description file, you can add examples you want to test into it. Then run the mock-server with follow command:
 
 ```sh
-$ npm run mock-server -d the-openrpc.json
+npm run mock-server -d the-openrpc.json
+```
+
+or
+
+```sh
+npx open-rpc-mock-server -p 3333 -d src/cfx/cfx.json
 ```
