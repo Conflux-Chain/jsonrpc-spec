@@ -1207,6 +1207,14 @@
         "result": "0x1"
       }
     ],
+    "cfx_maxPriorityFeePerGas": [
+      {
+        "name": "cfx_maxPriorityFeePerGas-1649303713050",
+        "description": "",
+        "params": [],
+        "result": "0x1"
+      }
+    ],
     "cfx_clientVersion": [
       {
         "name": "cfx_clientVersion-1649303713095",
@@ -2928,6 +2936,60 @@
         "error": {
           "code": -32016,
           "message": "Error processing request: State for epoch (number=70500000 hash=0x3dc71e0aa01c258cc1a2415ba54a4fb36a53ba19be4ea3be6e566e879a42ddd0) does not exist: out-of-bound StateAvailabilityBoundary { synced_state_height: 0, lower_bound: 70580001, upper_bound: 70587175, optimistic_executed_height: None }"
+        }
+      }
+    ],
+    "cfx_feeHistory": [
+      {
+        "name": "cfx_feeHistory-1649303721485",
+        "description": "",
+        "params": [
+          "0x5", "latest_state", [20, 30, 50]
+        ],
+        "result": {
+          "base_fee_per_gas": [
+              "0x3b9aca00",
+              "0x3b9aca00",
+              "0x3b9aca00",
+              "0x3b9aca00",
+              "0x3b9aca00",
+              "0x3b9aca00"
+          ],
+          "gas_used_ratio": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+          ],
+          "oldest_block": "0x108e70",
+          "reward": [
+              [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+              ],
+              [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+              ],
+              [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+              ],
+              [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+              ],
+              [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+              ]
+          ]
         }
       }
     ]
