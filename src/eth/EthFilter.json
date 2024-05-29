@@ -38,7 +38,7 @@
    "result": {
     "name": "filterId",
     "schema": {
-     "$ref": "#/components/schemas/U256"
+     "$ref": "#/components/schemas/H128"
     }
    }
   },
@@ -49,7 +49,7 @@
    "result": {
     "name": "eth_newBlockFilter_result",
     "schema": {
-     "$ref": "#/components/schemas/U256"
+     "$ref": "#/components/schemas/H128"
     }
    }
   },
@@ -60,7 +60,7 @@
    "result": {
     "name": "eth_newPendingTransactionFilter_result",
     "schema": {
-     "$ref": "#/components/schemas/U256"
+     "$ref": "#/components/schemas/H128"
     }
    }
   },
@@ -72,7 +72,7 @@
      "name": "filterId",
      "required": true,
      "schema": {
-      "$ref": "#/components/schemas/Index"
+      "$ref": "#/components/schemas/H128"
      }
     }
    ],
@@ -91,7 +91,7 @@
      "name": "filterId",
      "required": true,
      "schema": {
-      "$ref": "#/components/schemas/Index"
+      "$ref": "#/components/schemas/H128"
      }
     }
    ],
@@ -114,7 +114,7 @@
      "name": "filterId",
      "required": true,
      "schema": {
-      "$ref": "#/components/schemas/Index"
+      "$ref": "#/components/schemas/H128"
      }
     }
    ],
@@ -245,11 +245,14 @@
      },
      {
       "enum": [
-       "result",
        "empty"
       ]
      }
     ]
+   },
+   "H128": {
+    "type": "string",
+    "pattern": "^0x[0-9,a-f,A-F]{28}$"
    },
    "H160": {
     "type": "string",
@@ -258,9 +261,6 @@
    "H256": {
     "type": "string",
     "pattern": "^0x[0-9,a-f,A-F]{64}$"
-   },
-   "Index": {
-    "type": "number"
    },
    "Log": {
     "type": "object",
@@ -340,9 +340,6 @@
    },
    "bool": {
     "type": "boolean"
-   },
-   "usize": {
-    "type": "number"
    }
   }
  }

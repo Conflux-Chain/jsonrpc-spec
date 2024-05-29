@@ -55,6 +55,28 @@
       ]
     },
     {
+      "name": "cfx_maxPriorityFeePerGas",
+      "summary": "Returns current max_priority_fee",
+      "params": [],
+      "result": {
+        "name": "cfx_maxPriorityFeePerGas_result",
+        "schema": {
+          "$ref": "#/components/schemas/U256"
+        }
+      },
+      "examples": [
+        {
+          "name": "cfx_maxPriorityFeePerGas",
+          "description": "",
+          "params": [],
+          "result": {
+            "name": "cfx_maxPriorityFeePerGas-Result",
+            "value": "0x1"
+          }
+        }
+      ]
+    },
+    {
       "name": "cfx_epochNumber",
       "summary": "Returns highest epoch number.",
       "params": [
@@ -185,10 +207,10 @@
           }
         },
         {
-          "name": "epoch_number",
+          "name": "block_hash_or_epoch_number",
           "schema": {
             "nullable": true,
-            "$ref": "#/components/schemas/EpochNumber"
+            "$ref": "#/components/schemas/BlockHashOrEpochNumber"
           }
         }
       ],
@@ -222,7 +244,7 @@
               "value": "CFXTEST:TYPE.USER:AATGGCS6J4VMKE5M10WY04SKDZ7D27RDX2CZXKDMY3"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "latest_mined"
             }
           ],
@@ -244,7 +266,7 @@
               "value": "CFXTEST:TYPE.USER:AATGGCS6J4VMKE5M10WY04SKDZ7D27RDX2CZXKDMY3"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "earliest"
             }
           ],
@@ -265,7 +287,7 @@
               "value": "CFXTEST:TYPE.USER:AATGGCS6J4VMKE5M10WY04SKDZ7D27RDX2CZXKDMY3"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "latest_state"
             }
           ],
@@ -283,7 +305,7 @@
               "value": "CFXTEST:TYPE.USER:AATGGCS6J4VMKE5M10WY04SKDZ7D27RDX2CZXKDMY3"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "latest_confirmed"
             }
           ],
@@ -301,7 +323,7 @@
               "value": "CFXTEST:TYPE.USER:AATGGCS6J4VMKE5M10WY04SKDZ7D27RDX2CZXKDMY3"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "latest_finalized"
             }
           ],
@@ -319,7 +341,7 @@
               "value": "CFXTEST:TYPE.USER:AATGGCS6J4VMKE5M10WY04SKDZ7D27RDX2CZXKDMY3"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "latest_checkpoint"
             }
           ],
@@ -340,7 +362,7 @@
               "value": "CFXTEST:TYPE.NULL:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6F0VRCSW"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "latest_mined"
             }
           ],
@@ -362,7 +384,7 @@
               "value": "CFXTEST:TYPE.NULL:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6F0VRCSW"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "earliest"
             }
           ],
@@ -1637,10 +1659,10 @@
           }
         },
         {
-          "name": "epoch_number",
+          "name": "block_hash_or_epoch_number",
           "schema": {
             "nullable": true,
-            "$ref": "#/components/schemas/EpochNumber"
+            "$ref": "#/components/schemas/BlockHashOrEpochNumber"
           }
         }
       ],
@@ -1674,7 +1696,7 @@
               "value": "CFXTEST:TYPE.USER:AATGGCS6J4VMKE5M10WY04SKDZ7D27RDX2CZXKDMY3"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "latest_mined"
             }
           ],
@@ -1696,7 +1718,7 @@
               "value": "CFXTEST:TYPE.USER:AATGGCS6J4VMKE5M10WY04SKDZ7D27RDX2CZXKDMY3"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "earliest"
             }
           ],
@@ -1717,7 +1739,7 @@
               "value": "CFXTEST:TYPE.USER:AATGGCS6J4VMKE5M10WY04SKDZ7D27RDX2CZXKDMY3"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "latest_state"
             }
           ],
@@ -1735,7 +1757,7 @@
               "value": "CFXTEST:TYPE.USER:AATGGCS6J4VMKE5M10WY04SKDZ7D27RDX2CZXKDMY3"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "latest_confirmed"
             }
           ],
@@ -1753,7 +1775,7 @@
               "value": "CFXTEST:TYPE.USER:AATGGCS6J4VMKE5M10WY04SKDZ7D27RDX2CZXKDMY3"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "latest_finalized"
             }
           ],
@@ -1771,7 +1793,7 @@
               "value": "CFXTEST:TYPE.USER:AATGGCS6J4VMKE5M10WY04SKDZ7D27RDX2CZXKDMY3"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "latest_checkpoint"
             }
           ],
@@ -1792,7 +1814,7 @@
               "value": "CFXTEST:TYPE.NULL:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6F0VRCSW"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "latest_mined"
             }
           ],
@@ -1814,7 +1836,7 @@
               "value": "CFXTEST:TYPE.NULL:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6F0VRCSW"
             },
             {
-              "name": "epoch_number",
+              "name": "block_hash_or_epoch_number",
               "value": "earliest"
             }
           ],
@@ -1847,10 +1869,10 @@
           }
         },
         {
-          "name": "epoch_number",
+          "name": "block_hash_or_epoch_number",
           "schema": {
             "nullable": true,
-            "$ref": "#/components/schemas/EpochNumber"
+            "$ref": "#/components/schemas/BlockHashOrEpochNumber"
           }
         }
       ],
@@ -3357,10 +3379,10 @@
           }
         },
         {
-          "name": "epoch_number",
+          "name": "block_hash_or_epoch_number",
           "schema": {
             "nullable": true,
-            "$ref": "#/components/schemas/EpochNumber"
+            "$ref": "#/components/schemas/BlockHashOrEpochNumber"
           }
         }
       ],
@@ -3947,6 +3969,113 @@
         }
       },
       "examples": []
+    },
+    {
+      "name": "cfx_feeHistory",
+      "params": [
+        {
+          "name": "block_count",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/U64"
+          }
+        },
+        {
+          "name": "newest_block",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/EpochNumber"
+          }
+        },
+        {
+          "name": "reward_percentiles",
+          "required": true,
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/U64"
+            }
+          }
+        }
+      ],
+      "result": {
+        "name": "cfx_feeHistory_result",
+        "schema": {
+          "$ref": "#/components/schemas/FeeHistory"
+        }
+      },
+      "examples": [
+        {
+          "name": "cfx_feeHistory",
+          "description": "",
+          "params": [
+            {
+              "name": "block_count",
+              "value": "0x5"
+            },
+            {
+              "name": "newest_block",
+              "value": "latest_state"
+            },
+            {
+              "name": "reward_percentiles",
+              "value": [
+                20,
+                30,
+                50
+              ]
+            }
+          ],
+          "result": {
+            "name": "cfx_feeHistory-Result",
+            "value": {
+              "base_fee_per_gas": [
+                "0x3b9aca00",
+                "0x3b9aca00",
+                "0x3b9aca00",
+                "0x3b9aca00",
+                "0x3b9aca00",
+                "0x3b9aca00"
+              ],
+              "gas_used_ratio": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "oldest_block": "0x108e70",
+              "reward": [
+                [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+                ],
+                [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+                ],
+                [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+                ],
+                [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+                ],
+                [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+                ]
+              ]
+            }
+          }
+        }
+      ]
     },
     {
       "name": "cfx_checkBalanceAgainstTransaction",
@@ -5226,15 +5355,40 @@
       ]
     },
     {
-      "name": "cfx_openedMethodGroups",
-      "params": [],
-      "result": {
-        "name": "cfx_openedMethodGroups_result",
-        "schema": {
-          "type": "array",
-          "items": {
-            "$ref": "#/components/schemas/String"
+      "name": "cfx_getCollateralInfo",
+      "summary": "Return information about total token supply.",
+      "params": [
+        {
+          "name": "epoch_number",
+          "schema": {
+            "nullable": true,
+            "$ref": "#/components/schemas/EpochNumber"
           }
+        }
+      ],
+      "result": {
+        "name": "cfx_getCollateralInfo_result",
+        "schema": {
+          "$ref": "#/components/schemas/StorageCollateralInfo"
+        }
+      },
+      "examples": []
+    },
+    {
+      "name": "cfx_getFeeBurnt",
+      "params": [
+        {
+          "name": "epoch_number",
+          "schema": {
+            "nullable": true,
+            "$ref": "#/components/schemas/EpochNumber"
+          }
+        }
+      ],
+      "result": {
+        "name": "cfx_getFeeBurnt_result",
+        "schema": {
+          "$ref": "#/components/schemas/U256"
         }
       },
       "examples": []
@@ -5357,10 +5511,53 @@
           }
         }
       ]
+    },
+    {
+      "name": "cfx_getParamsFromVote",
+      "params": [
+        {
+          "name": "epoch_number",
+          "schema": {
+            "nullable": true,
+            "$ref": "#/components/schemas/EpochNumber"
+          }
+        }
+      ],
+      "result": {
+        "name": "cfx_getParamsFromVote_result",
+        "schema": {
+          "$ref": "#/components/schemas/VoteParamsInfo"
+        }
+      },
+      "examples": []
     }
   ],
   "components": {
     "schemas": {
+      "AccessList": {
+        "type": "array",
+        "items": {
+          "title": "AccessListItem",
+          "$ref": "#/components/schemas/AccessListItem"
+        }
+      },
+      "AccessListItem": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "title": "address",
+            "$ref": "#/components/schemas/Address"
+          },
+          "storageKeys": {
+            "type": "array",
+            "title": "storageKeys",
+            "items": {
+              "title": "H256",
+              "$ref": "#/components/schemas/H256"
+            }
+          }
+        }
+      },
       "Account": {
         "type": "object",
         "properties": {
@@ -5451,6 +5648,11 @@
           "adaptive": {
             "title": "adaptive",
             "$ref": "#/components/schemas/bool"
+          },
+          "baseFeePerGas": {
+            "nullable": true,
+            "title": "baseFeePerGas",
+            "$ref": "#/components/schemas/U256"
           },
           "blame": {
             "title": "blame",
@@ -5556,18 +5758,7 @@
           }
         }
       },
-      "BlockHashOrEpochNumber": {
-        "oneOf": [
-          {
-            "title": "H256",
-            "$ref": "#/components/schemas/H256"
-          },
-          {
-            "title": "EpochNumber",
-            "$ref": "#/components/schemas/EpochNumber"
-          }
-        ]
-      },
+      "BlockHashOrEpochNumber": {},
       "BlockTransactions": {
         "oneOf": [
           {
@@ -5596,8 +5787,13 @@
       },
       "CallRequest": {
         "type": "object",
-        "title": "The MAX_GAS_CALL_REQUEST is one magnitude higher than block gas limit and not too high that a call_virtual consumes too much resource.pub const MAX_GAS_CALL_REQUEST: u64 = 500_000_000;",
+        "title": "The MAX_GAS_CALL_REQUEST is one magnitude higher than block gas limit and not too high that a call_virtual consumes too much resource.pub const MAX_GAS_CALL_REQUEST: u64 = 15_000_000;",
         "properties": {
+          "accessList": {
+            "nullable": true,
+            "title": "accessList",
+            "$ref": "#/components/schemas/AccessList"
+          },
           "data": {
             "nullable": true,
             "title": "data",
@@ -5618,6 +5814,16 @@
             "title": "gasPrice",
             "$ref": "#/components/schemas/U256"
           },
+          "maxFeePerGas": {
+            "nullable": true,
+            "title": "maxFeePerGas",
+            "$ref": "#/components/schemas/U256"
+          },
+          "maxPriorityFeePerGas": {
+            "nullable": true,
+            "title": "maxPriorityFeePerGas",
+            "$ref": "#/components/schemas/U256"
+          },
           "nonce": {
             "nullable": true,
             "title": "nonce",
@@ -5632,6 +5838,11 @@
             "nullable": true,
             "title": "to",
             "$ref": "#/components/schemas/RpcAddress"
+          },
+          "transactionType": {
+            "nullable": true,
+            "title": "transactionType",
+            "$ref": "#/components/schemas/U64"
           },
           "value": {
             "nullable": true,
@@ -5742,7 +5953,7 @@
           },
           "depositTime": {
             "title": "depositTime",
-            "$ref": "#/components/schemas/u64"
+            "$ref": "#/components/schemas/U256"
           }
         }
       },
@@ -5782,6 +5993,42 @@
           }
         }
       },
+      "FeeHistory": {
+        "type": "object",
+        "properties": {
+          "baseFeePerGas": {
+            "type": "array",
+            "title": "baseFeePerGas",
+            "items": {
+              "title": "U256",
+              "$ref": "#/components/schemas/U256"
+            }
+          },
+          "gasUsedRatio": {
+            "type": "array",
+            "title": "gasUsedRatio",
+            "items": {
+              "title": "f64",
+              "$ref": "#/components/schemas/f64"
+            }
+          },
+          "oldestBlock": {
+            "title": "oldestBlock",
+            "$ref": "#/components/schemas/U256"
+          },
+          "reward": {
+            "type": "array",
+            "title": "reward",
+            "items": {
+              "type": "array",
+              "items": {
+                "title": "U256",
+                "$ref": "#/components/schemas/U256"
+              }
+            }
+          }
+        }
+      },
       "H256": {
         "type": "string",
         "pattern": "^0x[0-9,a-f,A-F]{64}$"
@@ -5812,6 +6059,11 @@
             "title": "logIndex",
             "$ref": "#/components/schemas/U256"
           },
+          "space": {
+            "nullable": true,
+            "title": "space",
+            "$ref": "#/components/schemas/Space"
+          },
           "topics": {
             "type": "array",
             "title": "topics",
@@ -5840,7 +6092,9 @@
       "PendingReason": {
         "enum": [
           "future_nonce",
-          "not_enough_cash"
+          "not_enough_cash",
+          "old_epoch_height",
+          "outdated_status"
         ]
       },
       "PoSEconomics": {
@@ -5870,14 +6124,28 @@
       "Receipt": {
         "type": "object",
         "properties": {
+          "accumulatedGasUsed": {
+            "nullable": true,
+            "title": "accumulatedGasUsed",
+            "$ref": "#/components/schemas/U256"
+          },
           "blockHash": {
             "title": "blockHash",
             "$ref": "#/components/schemas/H256"
+          },
+          "burntGasFee": {
+            "nullable": true,
+            "title": "burntGasFee",
+            "$ref": "#/components/schemas/U256"
           },
           "contractCreated": {
             "nullable": true,
             "title": "contractCreated",
             "$ref": "#/components/schemas/RpcAddress"
+          },
+          "effectiveGasPrice": {
+            "title": "effectiveGasPrice",
+            "$ref": "#/components/schemas/U256"
           },
           "epochNumber": {
             "nullable": true,
@@ -5920,6 +6188,11 @@
             "title": "outcomeStatus",
             "$ref": "#/components/schemas/U64"
           },
+          "space": {
+            "nullable": true,
+            "title": "space",
+            "$ref": "#/components/schemas/Space"
+          },
           "stateRoot": {
             "title": "stateRoot",
             "$ref": "#/components/schemas/H256"
@@ -5948,6 +6221,11 @@
           "transactionHash": {
             "title": "transactionHash",
             "$ref": "#/components/schemas/H256"
+          },
+          "transactionType": {
+            "nullable": true,
+            "title": "transactionType",
+            "$ref": "#/components/schemas/U64"
           },
           "txExecErrorMsg": {
             "nullable": true,
@@ -5994,6 +6272,10 @@
       "SponsorInfo": {
         "type": "object",
         "properties": {
+          "availableStoragePoints": {
+            "title": "availableStoragePoints",
+            "$ref": "#/components/schemas/U256"
+          },
           "sponsorBalanceForCollateral": {
             "title": "sponsorBalanceForCollateral",
             "$ref": "#/components/schemas/U256"
@@ -6012,6 +6294,10 @@
           },
           "sponsorGasBound": {
             "title": "sponsorGasBound",
+            "$ref": "#/components/schemas/U256"
+          },
+          "usedStoragePoints": {
+            "title": "usedStoragePoints",
             "$ref": "#/components/schemas/U256"
           }
         }
@@ -6078,6 +6364,23 @@
           }
         }
       },
+      "StorageCollateralInfo": {
+        "type": "object",
+        "properties": {
+          "convertedStoragePoints": {
+            "title": "convertedStoragePoints",
+            "$ref": "#/components/schemas/U256"
+          },
+          "totalStorageTokens": {
+            "title": "totalStorageTokens",
+            "$ref": "#/components/schemas/U256"
+          },
+          "usedStoragePoints": {
+            "title": "usedStoragePoints",
+            "$ref": "#/components/schemas/U256"
+          }
+        }
+      },
       "StorageRoot": {
         "type": "string",
         "pattern": "^0x[0-9,a-f,A-F]{64}$"
@@ -6097,6 +6400,10 @@
             "title": "totalCollateral",
             "$ref": "#/components/schemas/U256"
           },
+          "totalEspaceTokens": {
+            "title": "totalEspaceTokens",
+            "$ref": "#/components/schemas/U256"
+          },
           "totalIssued": {
             "title": "totalIssued",
             "$ref": "#/components/schemas/U256"
@@ -6110,6 +6417,11 @@
       "Transaction": {
         "type": "object",
         "properties": {
+          "accessList": {
+            "nullable": true,
+            "title": "accessList",
+            "$ref": "#/components/schemas/AccessList"
+          },
           "blockHash": {
             "nullable": true,
             "title": "blockHash",
@@ -6149,6 +6461,16 @@
             "title": "hash",
             "$ref": "#/components/schemas/H256"
           },
+          "maxFeePerGas": {
+            "nullable": true,
+            "title": "maxFeePerGas",
+            "$ref": "#/components/schemas/U256"
+          },
+          "maxPriorityFeePerGas": {
+            "nullable": true,
+            "title": "maxPriorityFeePerGas",
+            "$ref": "#/components/schemas/U256"
+          },
           "nonce": {
             "title": "nonce",
             "$ref": "#/components/schemas/U256"
@@ -6185,6 +6507,11 @@
             "title": "transactionIndex",
             "$ref": "#/components/schemas/U64"
           },
+          "transactionType": {
+            "nullable": true,
+            "title": "transactionType",
+            "$ref": "#/components/schemas/U64"
+          },
           "v": {
             "title": "v",
             "$ref": "#/components/schemas/U256"
@@ -6192,6 +6519,11 @@
           "value": {
             "title": "value",
             "$ref": "#/components/schemas/U256"
+          },
+          "yParity": {
+            "nullable": true,
+            "title": "yParity",
+            "$ref": "#/components/schemas/U64"
           }
         }
       },
@@ -6217,6 +6549,27 @@
         "type": "string",
         "pattern": "^0x([1-9a-f][0-9a-f]{0,15}|0)$"
       },
+      "VoteParamsInfo": {
+        "type": "object",
+        "properties": {
+          "pub(crate) baseFeeShareProp": {
+            "title": "pub(crate) baseFeeShareProp",
+            "$ref": "#/components/schemas/U256"
+          },
+          "pub(crate) interestRate": {
+            "title": "pub(crate) interestRate",
+            "$ref": "#/components/schemas/U256"
+          },
+          "pub(crate) powBaseReward": {
+            "title": "pub(crate) powBaseReward",
+            "$ref": "#/components/schemas/U256"
+          },
+          "pub(crate) storagePointProp": {
+            "title": "pub(crate) storagePointProp",
+            "$ref": "#/components/schemas/U256"
+          }
+        }
+      },
       "VoteStakeInfo": {
         "type": "object",
         "properties": {
@@ -6226,16 +6579,15 @@
           },
           "unlockBlockNumber": {
             "title": "unlockBlockNumber",
-            "$ref": "#/components/schemas/u64"
+            "$ref": "#/components/schemas/U256"
           }
         }
       },
       "bool": {
         "type": "boolean"
       },
-      "u64": {
-        "type": "number",
-        "pattern": "^[1-9]\\d*$"
+      "f64": {
+        "type": "number"
       }
     }
   }

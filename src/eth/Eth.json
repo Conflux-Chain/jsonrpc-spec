@@ -171,6 +171,113 @@
       "examples": []
     },
     {
+      "name": "eth_feeHistory",
+      "params": [
+        {
+          "name": "block_count",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/U64"
+          }
+        },
+        {
+          "name": "newest_block",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/BlockNumber"
+          }
+        },
+        {
+          "name": "reward_percentiles",
+          "required": true,
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/U64"
+            }
+          }
+        }
+      ],
+      "result": {
+        "name": "eth_feeHistory_result",
+        "schema": {
+          "$ref": "#/components/schemas/FeeHistory"
+        }
+      },
+      "examples": [
+        {
+          "name": "eth_feeHistory",
+          "description": "",
+          "params": [
+            {
+              "name": "block_count",
+              "value": "0x5"
+            },
+            {
+              "name": "newest_block",
+              "value": "latest_state"
+            },
+            {
+              "name": "reward_percentiles",
+              "value": [
+                20,
+                30,
+                50
+              ]
+            }
+          ],
+          "result": {
+            "name": "eth_feeHistory-Result",
+            "value": {
+              "base_fee_per_gas": [
+                "0x3b9aca00",
+                "0x3b9aca00",
+                "0x3b9aca00",
+                "0x3b9aca00",
+                "0x3b9aca00",
+                "0x3b9aca00"
+              ],
+              "gas_used_ratio": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "oldest_block": "0x108e70",
+              "reward": [
+                [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+                ],
+                [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+                ],
+                [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+                ],
+                [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+                ],
+                [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+                ]
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "eth_accounts",
       "summary": "Returns accounts list.",
       "params": [],
@@ -1284,7 +1391,7 @@
       "summary": "@alias of `eth_sendRawTransaction`.",
       "params": [
         {
-          "name": "bytes",
+          "name": "transaction",
           "required": true,
           "schema": {
             "$ref": "#/components/schemas/Bytes"
@@ -1333,14 +1440,14 @@
       "description": "The amount of gas used",
       "params": [
         {
-          "name": "callrequest",
+          "name": "transaction",
           "required": true,
           "schema": {
             "$ref": "#/components/schemas/CallRequest"
           }
         },
         {
-          "name": "blocknumber",
+          "name": "block",
           "schema": {
             "nullable": true,
             "$ref": "#/components/schemas/BlockNumber"
@@ -2382,7 +2489,7 @@
       "name": "parity_getBlockReceipts",
       "params": [
         {
-          "name": "blocknumber",
+          "name": "block",
           "schema": {
             "nullable": true,
             "$ref": "#/components/schemas/BlockNumber"
@@ -2399,10 +2506,93 @@
         }
       },
       "examples": []
+    },
+    {
+      "name": "eth_getAccountPendingTransactions",
+      "params": [
+        {
+          "name": "address",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/H160"
+          }
+        },
+        {
+          "name": "maybe_start_nonce",
+          "schema": {
+            "nullable": true,
+            "$ref": "#/components/schemas/U256"
+          }
+        },
+        {
+          "name": "maybe_limit",
+          "schema": {
+            "nullable": true,
+            "$ref": "#/components/schemas/U64"
+          }
+        }
+      ],
+      "result": {
+        "name": "eth_getAccountPendingTransactions_result",
+        "schema": {
+          "$ref": "#/components/schemas/AccountPendingTransactions"
+        }
+      },
+      "examples": []
     }
   ],
   "components": {
     "schemas": {
+      "AccessList": {
+        "type": "array",
+        "items": {
+          "title": "AccessListItem",
+          "$ref": "#/components/schemas/AccessListItem"
+        }
+      },
+      "AccessListItem": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "title": "address",
+            "$ref": "#/components/schemas/Address"
+          },
+          "storageKeys": {
+            "type": "array",
+            "title": "storageKeys",
+            "items": {
+              "title": "H256",
+              "$ref": "#/components/schemas/H256"
+            }
+          }
+        }
+      },
+      "AccountPendingTransactions": {
+        "type": "object",
+        "properties": {
+          "firstTxStatus": {
+            "nullable": true,
+            "title": "firstTxStatus",
+            "$ref": "#/components/schemas/TransactionStatus"
+          },
+          "pendingCount": {
+            "title": "pendingCount",
+            "$ref": "#/components/schemas/U64"
+          },
+          "pendingTransactions": {
+            "type": "array",
+            "title": "pendingTransactions",
+            "items": {
+              "title": "Transaction",
+              "$ref": "#/components/schemas/Transaction"
+            }
+          }
+        }
+      },
+      "Address": {
+        "type": "string",
+        "pattern": "^(NET\\d+|CFX|CFXTEST)(:TYPE\\..*|):[ABCDEFGHJKMNPRSTUVWXYZ0123456789]{42}$"
+      },
       "Block": {
         "type": "object",
         "title": "Block representation",
@@ -2572,6 +2762,11 @@
         "type": "object",
         "title": "Call request",
         "properties": {
+          "accessList": {
+            "nullable": true,
+            "title": "accessList",
+            "$ref": "#/components/schemas/AccessList"
+          },
           "data": {
             "nullable": true,
             "title": "data",
@@ -2612,6 +2807,11 @@
             "title": "to",
             "$ref": "#/components/schemas/H160"
           },
+          "transactionType": {
+            "nullable": true,
+            "title": "transactionType",
+            "$ref": "#/components/schemas/U64"
+          },
           "value": {
             "nullable": true,
             "title": "value",
@@ -2650,6 +2850,42 @@
             "items": {
               "title": "Topic",
               "$ref": "#/components/schemas/Topic"
+            }
+          }
+        }
+      },
+      "FeeHistory": {
+        "type": "object",
+        "properties": {
+          "baseFeePerGas": {
+            "type": "array",
+            "title": "baseFeePerGas",
+            "items": {
+              "title": "U256",
+              "$ref": "#/components/schemas/U256"
+            }
+          },
+          "gasUsedRatio": {
+            "type": "array",
+            "title": "gasUsedRatio",
+            "items": {
+              "title": "f64",
+              "$ref": "#/components/schemas/f64"
+            }
+          },
+          "oldestBlock": {
+            "title": "oldestBlock",
+            "$ref": "#/components/schemas/U256"
+          },
+          "reward": {
+            "type": "array",
+            "title": "reward",
+            "items": {
+              "type": "array",
+              "items": {
+                "title": "U256",
+                "$ref": "#/components/schemas/U256"
+              }
             }
           }
         }
@@ -2745,6 +2981,14 @@
           }
         }
       },
+      "PendingReason": {
+        "enum": [
+          "future_nonce",
+          "not_enough_cash",
+          "old_epoch_height",
+          "outdated_status"
+        ]
+      },
       "Receipt": {
         "type": "object",
         "title": "Receipt",
@@ -2755,6 +2999,11 @@
           },
           "blockNumber": {
             "title": "blockNumber",
+            "$ref": "#/components/schemas/U256"
+          },
+          "burntGasFee": {
+            "nullable": true,
+            "title": "burntGasFee",
             "$ref": "#/components/schemas/U256"
           },
           "contractAddress": {
@@ -2806,6 +3055,11 @@
           "transactionIndex": {
             "title": "transactionIndex",
             "$ref": "#/components/schemas/U256"
+          },
+          "transactionType": {
+            "nullable": true,
+            "title": "transactionType",
+            "$ref": "#/components/schemas/U64"
           },
           "txExecErrorMsg": {
             "nullable": true,
@@ -2880,6 +3134,11 @@
         "type": "object",
         "title": "Transaction",
         "properties": {
+          "accessList": {
+            "nullable": true,
+            "title": "accessList",
+            "$ref": "#/components/schemas/AccessList"
+          },
           "blockHash": {
             "nullable": true,
             "title": "blockHash",
@@ -2925,6 +3184,11 @@
             "title": "maxFeePerGas",
             "$ref": "#/components/schemas/U256"
           },
+          "maxPriorityFeePerGas": {
+            "nullable": true,
+            "title": "maxPriorityFeePerGas",
+            "$ref": "#/components/schemas/U256"
+          },
           "nonce": {
             "title": "nonce",
             "$ref": "#/components/schemas/U256"
@@ -2966,6 +3230,11 @@
             "title": "transactionIndex",
             "$ref": "#/components/schemas/U256"
           },
+          "transactionType": {
+            "nullable": true,
+            "title": "transactionType",
+            "$ref": "#/components/schemas/U64"
+          },
           "v": {
             "title": "v",
             "$ref": "#/components/schemas/U256"
@@ -2973,8 +3242,27 @@
           "value": {
             "title": "value",
             "$ref": "#/components/schemas/U256"
+          },
+          "yParity": {
+            "nullable": true,
+            "title": "yParity",
+            "$ref": "#/components/schemas/U64"
           }
         }
+      },
+      "TransactionStatus": {
+        "oneOf": [
+          {
+            "title": "PendingReason",
+            "$ref": "#/components/schemas/PendingReason"
+          },
+          {
+            "enum": [
+              "packed",
+              "ready"
+            ]
+          }
+        ]
       },
       "U256": {
         "type": "string",
@@ -2987,7 +3275,7 @@
       "bool": {
         "type": "boolean"
       },
-      "usize": {
+      "f64": {
         "type": "number"
       }
     }
