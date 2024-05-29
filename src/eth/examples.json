@@ -1212,6 +1212,14 @@
         "result": "0x1"
       }
     ],
+    "cfx_maxPriorityFeePerGas": [
+      {
+        "name": "eth_maxPriorityFeePerGas-1649755529684",
+        "description": "",
+        "params": [],
+        "result": "0x1"
+      }
+    ],
     "eth_blockNumber": [
       {
         "name": "eth_blockNumber-1649755529722",
@@ -1302,6 +1310,60 @@
           "pending"
         ],
         "result": "0x6"
+      }
+    ],
+    "eth_feeHistory": [
+      {
+        "name": "eth_feeHistory-1649303721485",
+        "description": "",
+        "params": [
+          "0x5", "latest_state", [20, 30, 50]
+        ],
+        "result": {
+          "base_fee_per_gas": [
+              "0x3b9aca00",
+              "0x3b9aca00",
+              "0x3b9aca00",
+              "0x3b9aca00",
+              "0x3b9aca00",
+              "0x3b9aca00"
+          ],
+          "gas_used_ratio": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+          ],
+          "oldest_block": "0x108e70",
+          "reward": [
+              [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+              ],
+              [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+              ],
+              [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+              ],
+              [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+              ],
+              [
+                  "0x0",
+                  "0x0",
+                  "0x0"
+              ]
+          ]
+        }
       }
     ]
   }
