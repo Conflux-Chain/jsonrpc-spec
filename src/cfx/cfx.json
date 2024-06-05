@@ -3911,7 +3911,7 @@
           "schema": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/U64"
+              "$ref": "#/components/schemas/f64"
             }
           }
         }
@@ -5423,30 +5423,6 @@
   ],
   "components": {
     "schemas": {
-      "AccessList": {
-        "type": "array",
-        "items": {
-          "title": "AccessListItem",
-          "$ref": "#/components/schemas/AccessListItem"
-        }
-      },
-      "AccessListItem": {
-        "type": "object",
-        "properties": {
-          "address": {
-            "title": "address",
-            "$ref": "#/components/schemas/Address"
-          },
-          "storageKeys": {
-            "type": "array",
-            "title": "storageKeys",
-            "items": {
-              "title": "H256",
-              "$ref": "#/components/schemas/H256"
-            }
-          }
-        }
-      },
       "Account": {
         "type": "object",
         "properties": {
@@ -5676,12 +5652,12 @@
       },
       "CallRequest": {
         "type": "object",
-        "title": "The MAX_GAS_CALL_REQUEST is one magnitude higher than block gas limit and not too high that a call_virtual consumes too much resource.pub const MAX_GAS_CALL_REQUEST: u64 = 15_000_000;",
+        "title": "The MAX_GAS_CALL_REQUEST is used as max value of cfx_call or cfx_estimate's gas value to prevent call_virtual consumes too much resource. The tx_pool will reject the tx if the gas is larger than half of the block gas limit. which is 30_000_000 before 1559, and 60_000_000 after 1559.pub const MAX_GAS_CALL_REQUEST: u64 = 15_000_000;",
         "properties": {
           "accessList": {
             "nullable": true,
             "title": "accessList",
-            "$ref": "#/components/schemas/AccessList"
+            "$ref": "#/components/schemas/CfxAccessList"
           },
           "data": {
             "nullable": true,
@@ -5737,6 +5713,30 @@
             "nullable": true,
             "title": "value",
             "$ref": "#/components/schemas/U256"
+          }
+        }
+      },
+      "CfxAccessList": {
+        "type": "array",
+        "items": {
+          "title": "CfxAccessListItem",
+          "$ref": "#/components/schemas/CfxAccessListItem"
+        }
+      },
+      "CfxAccessListItem": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "title": "address",
+            "$ref": "#/components/schemas/RpcAddress"
+          },
+          "storageKeys": {
+            "type": "array",
+            "title": "storageKeys",
+            "items": {
+              "title": "H256",
+              "$ref": "#/components/schemas/H256"
+            }
           }
         }
       },
@@ -6150,7 +6150,7 @@
       },
       "RpcAddress": {
         "type": "string",
-        "pattern": "(:TYPE\\..*|):[ABCDEFGHJKMNPRSTUVWXYZ0123456789]42)"
+        "pattern": "^(NET\\d+|CFX|CFXTEST)(:TYPE\\..*|):[ABCDEFGHJKMNPRSTUVWXYZ0123456789]{42}$"
       },
       "Space": {
         "enum": [
@@ -6309,7 +6309,7 @@
           "accessList": {
             "nullable": true,
             "title": "accessList",
-            "$ref": "#/components/schemas/AccessList"
+            "$ref": "#/components/schemas/CfxAccessList"
           },
           "blockHash": {
             "nullable": true,
