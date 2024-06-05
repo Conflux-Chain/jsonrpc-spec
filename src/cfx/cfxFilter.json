@@ -1,0 +1,366 @@
+{
+ "openrpc": "1.2.6",
+ "info": {
+  "title": "Conflux JSON-RPC Specification for namespace CfxFilter",
+  "description": "A specification of the standard interface of Conflux clients.",
+  "license": {
+   "name": "CC0-1.0",
+   "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+  },
+  "version": "0.1.0"
+ },
+ "servers": [
+  {
+   "name": "conflux core space mainnet RPC",
+   "url": "https://main.confluxrpc.com",
+   "summary": "The mainnet RPC server for Conflux core space. chainId: 1029"
+  },
+  {
+   "name": "conflux core space mainnet websocket RPC",
+   "url": "wss://main.confluxrpc.com/ws",
+   "summary": "The mainnet RPC server with websocket protocal for Conflux core space. chainId: 1029"
+  },
+  {
+   "name": "conflux core space testnet RPC",
+   "url": "https://test.confluxrpc.com",
+   "summary": "The testnet RPC server for Conflux core space. chainId: 1"
+  },
+  {
+   "name": "conflux core space testnet websocket RPC",
+   "url": "wss://test.confluxrpc.com/ws",
+   "summary": "The testnet RPC server with websocket protocal for Conflux core space. chainId: 1"
+  }
+ ],
+ "methods": [
+  {
+   "name": "cfx_newFilter",
+   "summary": "Returns id of new filter.",
+   "params": [
+    {
+     "name": "cfxrpclogfilter",
+     "required": true,
+     "schema": {
+      "$ref": "#/components/schemas/CfxRpcLogFilter"
+     }
+    }
+   ],
+   "result": {
+    "name": "cfx_newFilter_result",
+    "schema": {
+     "$ref": "#/components/schemas/H128"
+    }
+   }
+  },
+  {
+   "name": "cfx_newBlockFilter",
+   "summary": "Returns id of new block filter.",
+   "params": [],
+   "result": {
+    "name": "cfx_newBlockFilter_result",
+    "schema": {
+     "$ref": "#/components/schemas/H128"
+    }
+   }
+  },
+  {
+   "name": "cfx_newPendingTransactionFilter",
+   "summary": "Returns id of new block filter.",
+   "params": [],
+   "result": {
+    "name": "cfx_newPendingTransactionFilter_result",
+    "schema": {
+     "$ref": "#/components/schemas/H128"
+    }
+   }
+  },
+  {
+   "name": "cfx_getFilterChanges",
+   "summary": "Returns filter changes since last poll.",
+   "params": [
+    {
+     "name": "h128",
+     "required": true,
+     "schema": {
+      "$ref": "#/components/schemas/H128"
+     }
+    }
+   ],
+   "result": {
+    "name": "cfx_getFilterChanges_result",
+    "schema": {
+     "$ref": "#/components/schemas/CfxFilterChanges"
+    }
+   }
+  },
+  {
+   "name": "cfx_getFilterLogs",
+   "summary": "Returns all logs matching given filter (in a range 'from' - 'to').",
+   "params": [
+    {
+     "name": "h128",
+     "required": true,
+     "schema": {
+      "$ref": "#/components/schemas/H128"
+     }
+    }
+   ],
+   "result": {
+    "name": "cfx_getFilterLogs_result",
+    "schema": {
+     "type": "array",
+     "items": {
+      "$ref": "#/components/schemas/Log"
+     }
+    }
+   }
+  },
+  {
+   "name": "cfx_uninstallFilter",
+   "summary": "Uninstalls filter.",
+   "params": [
+    {
+     "name": "h128",
+     "required": true,
+     "schema": {
+      "$ref": "#/components/schemas/H128"
+     }
+    }
+   ],
+   "result": {
+    "name": "cfx_uninstallFilter_result",
+    "schema": {
+     "$ref": "#/components/schemas/bool"
+    }
+   }
+  }
+ ],
+ "components": {
+  "schemas": {
+   "Bytes": {
+    "type": "string",
+    "pattern": "^0x[0-9a-f]*$"
+   },
+   "CfxFilterChanges": {
+    "title": "Results of the filter_changes RPC.",
+    "oneOf": [
+     {
+      "type": "array",
+      "items": {
+       "title": "CfxFilterLog",
+       "$ref": "#/components/schemas/CfxFilterLog"
+      }
+     },
+     {
+      "type": "array",
+      "items": {
+       "title": "H256",
+       "$ref": "#/components/schemas/H256"
+      }
+     },
+     {
+      "enum": [
+       "empty"
+      ]
+     }
+    ]
+   },
+   "CfxFilterLog": {
+    "oneOf": [
+     {
+      "title": "Log",
+      "$ref": "#/components/schemas/Log"
+     },
+     {
+      "title": "RevertTo",
+      "$ref": "#/components/schemas/RevertTo"
+     }
+    ]
+   },
+   "CfxRpcLogFilter": {
+    "type": "object",
+    "properties": {
+     "address": {
+      "nullable": true,
+      "title": "address",
+      "oneOf": [
+       {
+        "title": "RpcAddress",
+        "$ref": "#/components/schemas/RpcAddress"
+       },
+       {
+        "type": "array",
+        "items": {
+         "title": "RpcAddress",
+         "$ref": "#/components/schemas/RpcAddress"
+        }
+       }
+      ]
+     },
+     "blockHashes": {
+      "type": "array",
+      "nullable": true,
+      "title": "blockHashes",
+      "items": {
+       "title": "H256",
+       "$ref": "#/components/schemas/H256"
+      }
+     },
+     "fromBlock": {
+      "nullable": true,
+      "title": "fromBlock",
+      "$ref": "#/components/schemas/U64"
+     },
+     "fromEpoch": {
+      "nullable": true,
+      "title": "fromEpoch",
+      "$ref": "#/components/schemas/EpochNumber"
+     },
+     "toBlock": {
+      "nullable": true,
+      "title": "toBlock",
+      "$ref": "#/components/schemas/U64"
+     },
+     "toEpoch": {
+      "nullable": true,
+      "title": "toEpoch",
+      "$ref": "#/components/schemas/EpochNumber"
+     },
+     "topics": {
+      "type": "array",
+      "nullable": true,
+      "title": "topics",
+      "items": {
+       "nullable": true,
+       "oneOf": [
+        {
+         "title": "H256",
+         "$ref": "#/components/schemas/H256"
+        },
+        {
+         "type": "array",
+         "items": {
+          "title": "H256",
+          "$ref": "#/components/schemas/H256"
+         }
+        }
+       ]
+      }
+     }
+    }
+   },
+   "EpochNumber": {
+    "title": "Represents rpc api epoch number param.",
+    "oneOf": [
+     {
+      "title": "U64",
+      "$ref": "#/components/schemas/U64"
+     },
+     {
+      "enum": [
+       "earliest",
+       "latest_checkpoint",
+       "latest_finalized",
+       "latest_confirmed",
+       "latest_state",
+       "latest_mined"
+      ]
+     }
+    ]
+   },
+   "H128": {
+    "type": "string",
+    "pattern": "^0x[0-9,a-f,A-F]{28}$"
+   },
+   "H256": {
+    "type": "string",
+    "pattern": "^0x[0-9,a-f,A-F]{64}$"
+   },
+   "Log": {
+    "type": "object",
+    "properties": {
+     "address": {
+      "title": "address",
+      "$ref": "#/components/schemas/RpcAddress"
+     },
+     "blockHash": {
+      "nullable": true,
+      "title": "blockHash",
+      "$ref": "#/components/schemas/H256"
+     },
+     "data": {
+      "title": "data",
+      "$ref": "#/components/schemas/Bytes"
+     },
+     "epochNumber": {
+      "nullable": true,
+      "title": "epochNumber",
+      "$ref": "#/components/schemas/U256"
+     },
+     "logIndex": {
+      "nullable": true,
+      "title": "logIndex",
+      "$ref": "#/components/schemas/U256"
+     },
+     "space": {
+      "nullable": true,
+      "title": "space",
+      "$ref": "#/components/schemas/Space"
+     },
+     "topics": {
+      "type": "array",
+      "title": "topics",
+      "items": {
+       "title": "H256",
+       "$ref": "#/components/schemas/H256"
+      }
+     },
+     "transactionHash": {
+      "nullable": true,
+      "title": "transactionHash",
+      "$ref": "#/components/schemas/H256"
+     },
+     "transactionIndex": {
+      "nullable": true,
+      "title": "transactionIndex",
+      "$ref": "#/components/schemas/U256"
+     },
+     "transactionLogIndex": {
+      "nullable": true,
+      "title": "transactionLogIndex",
+      "$ref": "#/components/schemas/U256"
+     }
+    }
+   },
+   "RevertTo": {
+    "type": "object",
+    "properties": {
+     "revertTo": {
+      "title": "revertTo",
+      "$ref": "#/components/schemas/U256"
+     }
+    }
+   },
+   "RpcAddress": {
+    "type": "string",
+    "pattern": "^(NET\\d+|CFX|CFXTEST)(:TYPE\\..*|):[ABCDEFGHJKMNPRSTUVWXYZ0123456789]42)$"
+   },
+   "Space": {
+    "enum": [
+     "native",
+     "ethereum"
+    ]
+   },
+   "U256": {
+    "type": "string",
+    "pattern": "^0x([1-9a-f][0-9a-f]{0,63}|0)$"
+   },
+   "U64": {
+    "type": "string",
+    "pattern": "^0x([1-9a-f][0-9a-f]{0,15}|0)$"
+   },
+   "bool": {
+    "type": "boolean"
+   }
+  }
+ }
+}
