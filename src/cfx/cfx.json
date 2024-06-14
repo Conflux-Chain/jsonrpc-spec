@@ -3919,7 +3919,7 @@
       "result": {
         "name": "cfx_feeHistory_result",
         "schema": {
-          "$ref": "#/components/schemas/FeeHistory"
+          "$ref": "#/components/schemas/CfxFeeHistory"
         }
       },
       "examples": [
@@ -5740,6 +5740,42 @@
           }
         }
       },
+      "CfxFeeHistory": {
+        "type": "object",
+        "properties": {
+          "baseFeePerGas": {
+            "type": "array",
+            "title": "baseFeePerGas",
+            "items": {
+              "title": "U256",
+              "$ref": "#/components/schemas/U256"
+            }
+          },
+          "gasUsedRatio": {
+            "type": "array",
+            "title": "gasUsedRatio",
+            "items": {
+              "title": "f64",
+              "$ref": "#/components/schemas/f64"
+            }
+          },
+          "oldestEpoch": {
+            "title": "oldestEpoch",
+            "$ref": "#/components/schemas/U256"
+          },
+          "reward": {
+            "type": "array",
+            "title": "reward",
+            "items": {
+              "type": "array",
+              "items": {
+                "title": "U256",
+                "$ref": "#/components/schemas/U256"
+              }
+            }
+          }
+        }
+      },
       "CfxRpcLogFilter": {
         "type": "object",
         "properties": {
@@ -5879,42 +5915,6 @@
           "storageCollateralized": {
             "title": "storageCollateralized",
             "$ref": "#/components/schemas/U64"
-          }
-        }
-      },
-      "FeeHistory": {
-        "type": "object",
-        "properties": {
-          "baseFeePerGas": {
-            "type": "array",
-            "title": "baseFeePerGas",
-            "items": {
-              "title": "U256",
-              "$ref": "#/components/schemas/U256"
-            }
-          },
-          "gasUsedRatio": {
-            "type": "array",
-            "title": "gasUsedRatio",
-            "items": {
-              "title": "f64",
-              "$ref": "#/components/schemas/f64"
-            }
-          },
-          "oldestBlock": {
-            "title": "oldestBlock",
-            "$ref": "#/components/schemas/U256"
-          },
-          "reward": {
-            "type": "array",
-            "title": "reward",
-            "items": {
-              "type": "array",
-              "items": {
-                "title": "U256",
-                "$ref": "#/components/schemas/U256"
-              }
-            }
           }
         }
       },
