@@ -203,7 +203,7 @@
           "schema": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/U64"
+              "$ref": "#/components/schemas/f64"
             }
           }
         }
