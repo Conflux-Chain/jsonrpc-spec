@@ -168,7 +168,17 @@
           "$ref": "#/components/schemas/U256"
         }
       },
-      "examples": []
+      "examples": [
+        {
+          "name": "eth_maxPriorityFeePerGas",
+          "description": "",
+          "params": [],
+          "result": {
+            "name": "eth_maxPriorityFeePerGas-Result",
+            "value": "0x1"
+          }
+        }
+      ]
     },
     {
       "name": "eth_feeHistory",

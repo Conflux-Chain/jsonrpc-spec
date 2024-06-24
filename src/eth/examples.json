@@ -1212,7 +1212,7 @@
         "result": "0x1"
       }
     ],
-    "cfx_maxPriorityFeePerGas": [
+    "eth_maxPriorityFeePerGas": [
       {
         "name": "eth_maxPriorityFeePerGas-1649755529684",
         "description": "",
