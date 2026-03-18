@@ -1,6 +1,6 @@
 const CfxOpenRPC = require('./cfx/cfx.json');
 const CfxExamples = require('./cfx/examples.json');
-const EthOpenRPC = require('./eth/eth.json');
+const EthOpenRPC = require('./eth/Eth.json');
 const EthExamples = require('./eth/examples.json');
 
 module.exports = {
