@@ -1757,6 +1757,7 @@
                   ],
                   "transactionHash": "0xb0312f4972128d4bfee5162ee10cdbea6d0252c337db0c88fed6ce4c16ce8008",
                   "transactionIndex": "0x2",
+                  "blockTimestamp": "0x69ba757f",
                   "transactionLogIndex": "0x0"
                 },
                 {
@@ -1771,6 +1772,7 @@
                   ],
                   "transactionHash": "0xb0312f4972128d4bfee5162ee10cdbea6d0252c337db0c88fed6ce4c16ce8008",
                   "transactionIndex": "0x2",
+                  "blockTimestamp": "0x69ba757f",
                   "transactionLogIndex": "0x1"
                 },
                 {
@@ -1786,6 +1788,7 @@
                   ],
                   "transactionHash": "0xb0312f4972128d4bfee5162ee10cdbea6d0252c337db0c88fed6ce4c16ce8008",
                   "transactionIndex": "0x2",
+                  "blockTimestamp": "0x69ba757f",
                   "transactionLogIndex": "0x2"
                 }
               ],
@@ -1875,6 +1878,7 @@
                   ],
                   "transactionHash": "0x825cbc85aadf04f525c3a8fefa6c062014a894009e429204660a73706909f918",
                   "transactionIndex": "0x1",
+                  "blockTimestamp": "0x69ba757f",
                   "transactionLogIndex": "0x0"
                 }
               ],
@@ -2041,6 +2045,7 @@
                 ],
                 "transactionHash": "0x1bbc639c7dd00b9a09e51b606137be180c7812c8a752aa90d89fb6b22ef45807",
                 "transactionIndex": "0x0",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x0"
               },
               {
@@ -2057,6 +2062,7 @@
                 ],
                 "transactionHash": "0x1bbc639c7dd00b9a09e51b606137be180c7812c8a752aa90d89fb6b22ef45807",
                 "transactionIndex": "0x0",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x1"
               },
               {
@@ -2073,6 +2079,7 @@
                 ],
                 "transactionHash": "0x1bbc639c7dd00b9a09e51b606137be180c7812c8a752aa90d89fb6b22ef45807",
                 "transactionIndex": "0x0",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x2"
               },
               {
@@ -2087,6 +2094,7 @@
                 ],
                 "transactionHash": "0x1bbc639c7dd00b9a09e51b606137be180c7812c8a752aa90d89fb6b22ef45807",
                 "transactionIndex": "0x0",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x3"
               },
               {
@@ -2103,6 +2111,7 @@
                 ],
                 "transactionHash": "0x1bbc639c7dd00b9a09e51b606137be180c7812c8a752aa90d89fb6b22ef45807",
                 "transactionIndex": "0x0",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x4"
               },
               {
@@ -2118,6 +2127,7 @@
                 ],
                 "transactionHash": "0x142febc57ab34e731da29cd68f5330f54311ddab11827ca4a0734ff219548602",
                 "transactionIndex": "0x1",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x0"
               },
               {
@@ -2134,6 +2144,7 @@
                 ],
                 "transactionHash": "0x142febc57ab34e731da29cd68f5330f54311ddab11827ca4a0734ff219548602",
                 "transactionIndex": "0x1",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x1"
               },
               {
@@ -2150,6 +2161,7 @@
                 ],
                 "transactionHash": "0x142febc57ab34e731da29cd68f5330f54311ddab11827ca4a0734ff219548602",
                 "transactionIndex": "0x1",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x2"
               },
               {
@@ -2164,6 +2176,7 @@
                 ],
                 "transactionHash": "0x142febc57ab34e731da29cd68f5330f54311ddab11827ca4a0734ff219548602",
                 "transactionIndex": "0x1",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x3"
               },
               {
@@ -2180,6 +2193,7 @@
                 ],
                 "transactionHash": "0x142febc57ab34e731da29cd68f5330f54311ddab11827ca4a0734ff219548602",
                 "transactionIndex": "0x1",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x4"
               },
               {
@@ -2194,6 +2208,7 @@
                 ],
                 "transactionHash": "0xb0312f4972128d4bfee5162ee10cdbea6d0252c337db0c88fed6ce4c16ce8008",
                 "transactionIndex": "0x2",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x0"
               },
               {
@@ -2208,6 +2223,7 @@
                 ],
                 "transactionHash": "0xb0312f4972128d4bfee5162ee10cdbea6d0252c337db0c88fed6ce4c16ce8008",
                 "transactionIndex": "0x2",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x1"
               },
               {
@@ -2223,6 +2239,7 @@
                 ],
                 "transactionHash": "0xb0312f4972128d4bfee5162ee10cdbea6d0252c337db0c88fed6ce4c16ce8008",
                 "transactionIndex": "0x2",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x2"
               }
             ]
@@ -2316,6 +2333,7 @@
                 ],
                 "transactionHash": "0x88d7b70b17589ca2c2e9feac1b8b13371a55645f3f607693af9c1ed55c54ac06",
                 "transactionIndex": "0x0",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x1"
               },
               {
@@ -2332,6 +2350,7 @@
                 ],
                 "transactionHash": "0x88d7b70b17589ca2c2e9feac1b8b13371a55645f3f607693af9c1ed55c54ac06",
                 "transactionIndex": "0x0",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x2"
               },
               {
@@ -2348,6 +2367,7 @@
                 ],
                 "transactionHash": "0x814df8898c715837cfda1a8cd2d5ceb9186fada4d9c2908f5b2abfd34c61bacb",
                 "transactionIndex": "0x2",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x1"
               },
               {
@@ -2364,6 +2384,7 @@
                 ],
                 "transactionHash": "0x814df8898c715837cfda1a8cd2d5ceb9186fada4d9c2908f5b2abfd34c61bacb",
                 "transactionIndex": "0x2",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x2"
               },
               {
@@ -2380,6 +2401,7 @@
                 ],
                 "transactionHash": "0x506d727b15afcadda0a418bfa62cc82ccd5b159729ffa36595994d2cbc6358fe",
                 "transactionIndex": "0x3",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x1"
               },
               {
@@ -2396,6 +2418,7 @@
                 ],
                 "transactionHash": "0x506d727b15afcadda0a418bfa62cc82ccd5b159729ffa36595994d2cbc6358fe",
                 "transactionIndex": "0x3",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x2"
               },
               {
@@ -2412,6 +2435,7 @@
                 ],
                 "transactionHash": "0x506d727b15afcadda0a418bfa62cc82ccd5b159729ffa36595994d2cbc6358fe",
                 "transactionIndex": "0x3",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x3"
               },
               {
@@ -2428,6 +2452,7 @@
                 ],
                 "transactionHash": "0x506d727b15afcadda0a418bfa62cc82ccd5b159729ffa36595994d2cbc6358fe",
                 "transactionIndex": "0x3",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x4"
               },
               {
@@ -2444,6 +2469,7 @@
                 ],
                 "transactionHash": "0x506d727b15afcadda0a418bfa62cc82ccd5b159729ffa36595994d2cbc6358fe",
                 "transactionIndex": "0x3",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x5"
               },
               {
@@ -2460,6 +2486,7 @@
                 ],
                 "transactionHash": "0x506d727b15afcadda0a418bfa62cc82ccd5b159729ffa36595994d2cbc6358fe",
                 "transactionIndex": "0x3",
+                "blockTimestamp": "0x69ba757f",
                 "transactionLogIndex": "0x8"
               }
             ]
@@ -2962,6 +2989,11 @@
           "logIndex": {
             "nullable": true,
             "title": "logIndex",
+            "$ref": "#/components/schemas/U256"
+          },
+          "blockTimestamp": {
+            "nullable": true,
+            "title": "blockTimestamp",
             "$ref": "#/components/schemas/U256"
           },
           "removed": {
